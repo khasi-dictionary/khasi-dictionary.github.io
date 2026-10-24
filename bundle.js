@@ -24027,6 +24027,10 @@
     const out = /* @__PURE__ */ new Set();
     const noParen = hebrew.replace(/\([^)]*\)/g, " ");
     for (const source of [hebrew, noParen]) {
+      const full = normalizeHebrew(source);
+      if (full) out.add(full);
+      const fullNoEtc = normalizeHebrew(source.replace(/וכו'?\s*$/, ""));
+      if (fullNoEtc) out.add(fullNoEtc);
       for (const part of source.split("/")) {
         const cleaned = normalizeHebrew(part.replace(/וכו'?\s*$/, ""));
         if (cleaned) out.add(cleaned);
@@ -24038,6 +24042,10 @@
     const out = /* @__PURE__ */ new Set();
     const noParen = english.replace(/\([^)]*\)/g, " ");
     for (const source of [english, noParen]) {
+      const full = normalizeEnglish(source);
+      if (full) out.add(full);
+      const fullNoEtc = normalizeEnglish(source.replace(/\betc\.?\s*$/, ""));
+      if (fullNoEtc) out.add(fullNoEtc);
       for (const part of source.split("/")) {
         const cleaned = normalizeEnglish(part.replace(/\betc\.?\s*$/, ""));
         if (cleaned) out.add(cleaned);
