@@ -24059,8 +24059,29 @@
     }
     return [...out];
   }
+  var EXTRA_ANSWERS = {
+    "Thiah suk|greetings": { he: ["\u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1"] },
+    "Phan|jingbam": { he: ["\u05EA\u05E4\u05D5\u05D7 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D7\u05D9 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D3"], en: ["potatoes"] },
+    "Jhur|jingbam": { he: ["\u05D9\u05E8\u05E7"], en: ["vegetable"] },
+    "Syntiew|others": { he: ["\u05E4\u05E8\u05D7"], en: ["flower"] },
+    "Thiah|others": { he: ["\u05E9\u05D9\u05E0\u05D4"] },
+    "Wei|numbers": { he: ["\u05D0\u05D7\u05D3", "\u05D0\u05D7\u05EA"], en: ["one"] },
+    "Ar|numbers": { he: ["\u05E9\u05E0\u05D9\u05D9\u05DD", "\u05E9\u05EA\u05D9\u05D9\u05DD"], en: ["two"] },
+    "Lai|numbers": { he: ["\u05E9\u05DC\u05D5\u05E9", "\u05E9\u05DC\u05D5\u05E9\u05D4"], en: ["three"] },
+    "Saw|numbers": { he: ["\u05D0\u05E8\u05D1\u05E2", "\u05D0\u05E8\u05D1\u05E2\u05D4"], en: ["four"] },
+    "San|numbers": { he: ["\u05D7\u05DE\u05E9", "\u05D7\u05DE\u05D9\u05E9\u05D4"], en: ["five"] },
+    "Hynriew|numbers": { he: ["\u05E9\u05E9", "\u05E9\u05D9\u05E9\u05D4"], en: ["six"] },
+    "Hyn\xF1iew|numbers": { he: ["\u05E9\u05D1\u05E2", "\u05E9\u05D1\u05E2\u05D4"], en: ["seven"] },
+    "Phra|numbers": { he: ["\u05E9\u05DE\u05D5\u05E0\u05D4"], en: ["eight"] },
+    "Khyndai|numbers": { he: ["\u05EA\u05E9\u05E2", "\u05EA\u05E9\u05E2\u05D4"], en: ["nine"] },
+    "Shiphew|numbers": { he: ["\u05E2\u05E9\u05E8", "\u05E2\u05E9\u05E8\u05D4"], en: ["ten"] }
+  };
   function localAnswers(entry, lang) {
-    return lang === "he" ? hebrewAnswers(entry.hebrew) : englishAnswers(entry.english);
+    const base = lang === "he" ? hebrewAnswers(entry.hebrew) : englishAnswers(entry.english);
+    const norm = lang === "he" ? normalizeHebrew : normalizeEnglish;
+    const extra = EXTRA_ANSWERS[`${entry.khasi}|${entry.category}`];
+    const extraList = (lang === "he" ? extra?.he : extra?.en) ?? [];
+    return [.../* @__PURE__ */ new Set([...base, ...extraList.map(norm)])];
   }
   function localText(entry, lang) {
     return lang === "he" ? entry.hebrew : entry.english;
