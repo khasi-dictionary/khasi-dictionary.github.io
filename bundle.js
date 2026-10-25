@@ -23969,7 +23969,7 @@
     { khasi: "Khublei", hebrew: "\u05EA\u05D5\u05D3\u05D4", english: "Thank you", category: "greetings" },
     { khasi: "Map", hebrew: "\u05E1\u05DC\u05D9\u05D7\u05D4", english: "Sorry / excuse me", category: "greetings" },
     { khasi: "Jingbam", hebrew: "\u05D0\u05D5\u05DB\u05DC", english: "Food", category: "jingbam" },
-    { khasi: "Doh syiar", hebrew: "\u05D1\u05E9\u05E8 \u05E2\u05D5\u05E3", english: "Chicken meat", category: "jingbam" },
+    { khasi: "Doh syiar", hebrew: "\u05E2\u05D5\u05E3", english: "Chicken meat", category: "jingbam" },
     { khasi: "Doh masi", hebrew: "\u05D1\u05E9\u05E8 \u05E4\u05E8\u05D4", english: "Beef", category: "jingbam" },
     { khasi: "Doh kha", hebrew: "\u05D3\u05D2/\u05D1\u05E9\u05E8 \u05D3\u05D2", english: "Fish / fish meat", category: "jingbam" },
     { khasi: "Jhur", hebrew: "\u05D9\u05E8\u05E7\u05D5\u05EA", english: "Vegetables", category: "jingbam" },
@@ -23990,7 +23990,7 @@
     { khasi: "Mrat", hebrew: "\u05D7\u05D9\u05D5\u05EA", english: "Animals", category: "mrat" },
     { khasi: "Miaow", hebrew: "\u05D7\u05EA\u05D5\u05DC", english: "Cat", category: "mrat" },
     { khasi: "Ksiew", hebrew: "\u05DB\u05DC\u05D1", english: "Dog", category: "mrat" },
-    { khasi: "Syiar", hebrew: "\u05E2\u05D5\u05E3", english: "Chicken", category: "mrat" },
+    { khasi: "Syiar", hebrew: "\u05EA\u05E8\u05E0\u05D2\u05D5\u05DC", english: "Chicken", category: "mrat" },
     { khasi: "Masi", hebrew: "\u05E4\u05E8\u05D4", english: "Cow", category: "mrat" },
     { khasi: "Doh Kha", hebrew: "\u05D3\u05D2", english: "Fish", category: "mrat" },
     { khasi: "Sim", hebrew: "\u05E6\u05D9\u05E4\u05D5\u05E8", english: "Bird", category: "mrat" },
@@ -24061,6 +24061,7 @@
   }
   var EXTRA_ANSWERS = {
     "Thiah suk|greetings": { he: ["\u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1"] },
+    "Doh syiar|jingbam": { he: ["\u05D1\u05E9\u05E8 \u05E2\u05D5\u05E3"] },
     "Phan|jingbam": { he: ["\u05EA\u05E4\u05D5\u05D7 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D7\u05D9 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D3"], en: ["potatoes"] },
     "Jhur|jingbam": { he: ["\u05D9\u05E8\u05E7"], en: ["vegetable"] },
     "Syntiew|others": { he: ["\u05E4\u05E8\u05D7"], en: ["flower"] },
