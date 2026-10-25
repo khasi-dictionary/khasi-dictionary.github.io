@@ -23959,7 +23959,8 @@
     { id: "mrat", label: "Mrat (Animals)", he: "Mrat \xB7 \u05D7\u05D9\u05D5\u05EA", en: "Mrat \xB7 Animals" },
     { id: "furnitures", label: "Furnitures", he: "\u05E8\u05D4\u05D9\u05D8\u05D9\u05DD", en: "Furnitures" },
     { id: "others", label: "Others", he: "\u05E9\u05D5\u05E0\u05D5\u05EA", en: "Others" },
-    { id: "numbers", label: "Numbers", he: "\u05DE\u05E1\u05E4\u05E8\u05D9\u05DD", en: "Numbers" }
+    { id: "numbers", label: "Numbers", he: "\u05DE\u05E1\u05E4\u05E8\u05D9\u05DD", en: "Numbers" },
+    { id: "pronouns", label: "Pronouns", he: "\u05DB\u05D9\u05E0\u05D5\u05D9\u05D9 \u05D2\u05D5\u05E3", en: "Pronouns" }
   ];
   var ENTRIES = [
     { khasi: "Thiah suk", hebrew: "\u05DC\u05D9\u05DC\u05D4 \u05D8\u05D5\u05D1 (\u05DE\u05D9\u05DC\u05D5\u05DC\u05D9\u05EA: \u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1)", english: "Good night (literally: sleep well)", category: "greetings" },
@@ -24002,6 +24003,9 @@
     { khasi: "Deing", hebrew: "\u05E2\u05E5", english: "Tree", category: "others" },
     { khasi: "Saw", hebrew: "\u05D0\u05D3\u05D5\u05DD", english: "Red", category: "others" },
     { khasi: "Khia", hebrew: "\u05DB\u05D1\u05D3", english: "Heavy", category: "others" },
+    { khasi: "Nga", hebrew: "\u05D0\u05E0\u05D9", english: "I", category: "pronouns" },
+    { khasi: "Ieit", hebrew: "\u05D0\u05D4\u05D1\u05D4", english: "Love", category: "others" },
+    { khasi: "Ia phi", hebrew: "\u05D0\u05D5\u05EA\u05DA/\u05D1\u05E9\u05D1\u05D9\u05DC\u05DA/\u05E2\u05D1\u05D5\u05E8\u05DA/\u05DC\u05DA", english: "You / for you / to you", category: "pronouns" },
     { khasi: "Wei", hebrew: "1", english: "1", category: "numbers" },
     { khasi: "Ar", hebrew: "2", english: "2", category: "numbers" },
     { khasi: "Lai", hebrew: "3", english: "3", category: "numbers" },
@@ -24181,7 +24185,8 @@
     mrat: { color: "#5f9e6e", emoji: "\u{1F43E}", enShort: "Mrat \xB7 Animals" },
     furnitures: { color: "#8a7ec8", emoji: "\u{1FA91}", enShort: "Furniture" },
     others: { color: "#d3608a", emoji: "\u{1F308}", enShort: "Other" },
-    numbers: { color: "#4f8fc9", emoji: "\u{1F522}", enShort: "Numbers" }
+    numbers: { color: "#4f8fc9", emoji: "\u{1F522}", enShort: "Numbers" },
+    pronouns: { color: "#3aa7a3", emoji: "\u{1F9CD}", enShort: "Pronouns" }
   };
   var catName = (id, lang) => {
     const cat = CATEGORIES.find((c) => c.id === id);
