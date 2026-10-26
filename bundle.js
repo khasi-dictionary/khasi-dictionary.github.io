@@ -24062,6 +24062,7 @@
   var EXTRA_ANSWERS = {
     "Thiah suk|greetings": { he: ["\u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1"] },
     "Doh syiar|jingbam": { he: ["\u05D1\u05E9\u05E8 \u05E2\u05D5\u05E3"] },
+    "Ieit|others": { he: ["\u05D0\u05D5\u05D4\u05D1", "\u05D0\u05D5\u05D4\u05D1\u05EA"] },
     "Phan|jingbam": { he: ["\u05EA\u05E4\u05D5\u05D7 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D7\u05D9 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D3"], en: ["potatoes"] },
     "Jhur|jingbam": { he: ["\u05D9\u05E8\u05E7"], en: ["vegetable"] },
     "Syntiew|others": { he: ["\u05E4\u05E8\u05D7"], en: ["flower"] },
