@@ -176,7 +176,10 @@ interface Round { deck: RoundCard[]; idx: number; correct: number; results: ('c'
 
 function Practice({ lang, t, stats, setStats, savedStats, goal }: { lang: Lang; t: Strings; stats: Stats; setStats: (s: Stats) => void; savedStats: { ready: boolean; message?: string }; goal: Goal }) {
     const [prefs, setPrefs, savedPrefs] = useLocalState('khasi-practice-prefs.v2', { direction: null as string | null, category: 'all', size: 10 });
-    const effDirection = prefs.direction ?? (goal === 'hebrew' ? 'local2kh' : 'kh2local');
+    // Default practice direction is Khasi prompt -> answer in the local language (מקהאסי לעברית).
+    // For Khasi speakers learning Hebrew (goal 'hebrew') this is exactly the requested flow:
+    // they see the Khasi word they know and type the Hebrew they are learning.
+    const effDirection = prefs.direction ?? 'kh2local';
     const [round, setRound] = useState<Round | null>(null);
     const [answer, setAnswer] = useState('');
     const [feedback, setFeedback] = useState<null | { ok: boolean; expected: string[] }>(null);

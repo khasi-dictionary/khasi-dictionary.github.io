@@ -24289,7 +24289,7 @@
   }
   function Practice({ lang, t, stats, setStats, savedStats, goal }) {
     const [prefs, setPrefs, savedPrefs] = useLocalState("khasi-practice-prefs.v2", { direction: null, category: "all", size: 10 });
-    const effDirection = prefs.direction ?? (goal === "hebrew" ? "local2kh" : "kh2local");
+    const effDirection = prefs.direction ?? "kh2local";
     const [round, setRound] = (0, import_react2.useState)(null);
     const [answer, setAnswer] = (0, import_react2.useState)("");
     const [feedback, setFeedback] = (0, import_react2.useState)(null);
