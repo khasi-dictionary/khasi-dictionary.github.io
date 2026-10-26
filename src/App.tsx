@@ -81,6 +81,7 @@ const CAT_STYLE: Record<string, { color: string; emoji: string; enShort: string 
     others: { color: '#d3608a', emoji: '🌈', enShort: 'Other' },
     numbers: { color: '#4f8fc9', emoji: '🔢', enShort: 'Numbers' },
     pronouns: { color: '#3aa7a3', emoji: '🧍', enShort: 'Pronouns' },
+    adjectives: { color: '#a0785a', emoji: '📏', enShort: 'Adjectives' },
 };
 
 const catName = (id: string, lang: Lang) => {

@@ -9,6 +9,7 @@ export const CATEGORIES: Category[] = [
     { id: 'others', label: 'Others', he: 'שונות', en: 'Others' },
     { id: 'numbers', label: 'Numbers', he: 'מספרים', en: 'Numbers' },
     { id: 'pronouns', label: 'Pronouns', he: 'כינויי גוף', en: 'Pronouns' },
+    { id: 'adjectives', label: 'Adjectives', he: 'שמות תואר', en: 'Adjectives' },
 ];
 
 export const ENTRIES: Entry[] = [
@@ -51,6 +52,7 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Jingkhang', hebrew: 'דלת', english: 'Door', category: 'furnitures', added: '2026-10-25' },
     { khasi: 'Shuki', hebrew: 'כיסא', english: 'Chair', category: 'furnitures' },
     { khasi: 'Pliang', hebrew: 'צלחת / צלחות', english: 'plate / plates', category: 'others', added: '2026-10-26' },
+    { khasi: 'Jrong', hebrew: 'גבוה/ארוך', english: 'tall / long', category: 'adjectives' },
 
     { khasi: 'Syntiew', hebrew: 'פרחים', english: 'Flowers', category: 'others' },
     { khasi: 'Thiah', hebrew: 'לישון', english: 'To sleep', category: 'others' },

@@ -23951,7 +23951,8 @@
     { id: "furnitures", label: "Furnitures", he: "\u05E8\u05D4\u05D9\u05D8\u05D9\u05DD", en: "Furnitures" },
     { id: "others", label: "Others", he: "\u05E9\u05D5\u05E0\u05D5\u05EA", en: "Others" },
     { id: "numbers", label: "Numbers", he: "\u05DE\u05E1\u05E4\u05E8\u05D9\u05DD", en: "Numbers" },
-    { id: "pronouns", label: "Pronouns", he: "\u05DB\u05D9\u05E0\u05D5\u05D9\u05D9 \u05D2\u05D5\u05E3", en: "Pronouns" }
+    { id: "pronouns", label: "Pronouns", he: "\u05DB\u05D9\u05E0\u05D5\u05D9\u05D9 \u05D2\u05D5\u05E3", en: "Pronouns" },
+    { id: "adjectives", label: "Adjectives", he: "\u05E9\u05DE\u05D5\u05EA \u05EA\u05D5\u05D0\u05E8", en: "Adjectives" }
   ];
   var ENTRIES = [
     { khasi: "Thiah suk", hebrew: "\u05DC\u05D9\u05DC\u05D4 \u05D8\u05D5\u05D1 (\u05DE\u05D9\u05DC\u05D5\u05DC\u05D9\u05EA: \u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1)", english: "Good night (literally: sleep well)", category: "greetings" },
@@ -23990,6 +23991,7 @@
     { khasi: "Jingkhang", hebrew: "\u05D3\u05DC\u05EA", english: "Door", category: "furnitures", added: "2026-10-25" },
     { khasi: "Shuki", hebrew: "\u05DB\u05D9\u05E1\u05D0", english: "Chair", category: "furnitures" },
     { khasi: "Pliang", hebrew: "\u05E6\u05DC\u05D7\u05EA / \u05E6\u05DC\u05D7\u05D5\u05EA", english: "plate / plates", category: "others", added: "2026-10-26" },
+    { khasi: "Jrong", hebrew: "\u05D2\u05D1\u05D5\u05D4/\u05D0\u05E8\u05D5\u05DA", english: "tall / long", category: "adjectives" },
     { khasi: "Syntiew", hebrew: "\u05E4\u05E8\u05D7\u05D9\u05DD", english: "Flowers", category: "others" },
     { khasi: "Thiah", hebrew: "\u05DC\u05D9\u05E9\u05D5\u05DF", english: "To sleep", category: "others" },
     { khasi: "khang", hebrew: "\u05E1\u05D2\u05D5\u05E8/\u05E1\u05D2\u05D5\u05E8\u05D4", english: "Closed", category: "others" },
@@ -24205,7 +24207,8 @@
     furnitures: { color: "#8a7ec8", emoji: "\u{1FA91}", enShort: "Furniture" },
     others: { color: "#d3608a", emoji: "\u{1F308}", enShort: "Other" },
     numbers: { color: "#4f8fc9", emoji: "\u{1F522}", enShort: "Numbers" },
-    pronouns: { color: "#3aa7a3", emoji: "\u{1F9CD}", enShort: "Pronouns" }
+    pronouns: { color: "#3aa7a3", emoji: "\u{1F9CD}", enShort: "Pronouns" },
+    adjectives: { color: "#a0785a", emoji: "\u{1F4CF}", enShort: "Adjectives" }
   };
   var catName = (id, lang) => {
     const cat = CATEGORIES.find((c) => c.id === id);
