@@ -29,9 +29,9 @@
     mod
   ));
 
-  // node_modules/scheduler/cjs/scheduler.development.js
+  // ../../../tmp/esb/node_modules/scheduler/cjs/scheduler.development.js
   var require_scheduler_development = __commonJS({
-    "node_modules/scheduler/cjs/scheduler.development.js"(exports) {
+    "../../../tmp/esb/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
       "use strict";
       (function() {
         function performWorkUntilDeadline() {
@@ -288,9 +288,9 @@
     }
   });
 
-  // node_modules/scheduler/index.js
+  // ../../../tmp/esb/node_modules/scheduler/index.js
   var require_scheduler = __commonJS({
-    "node_modules/scheduler/index.js"(exports, module) {
+    "../../../tmp/esb/node_modules/scheduler/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -300,9 +300,9 @@
     }
   });
 
-  // node_modules/react/cjs/react.development.js
+  // ../../../tmp/esb/node_modules/react/cjs/react.development.js
   var require_react_development = __commonJS({
-    "node_modules/react/cjs/react.development.js"(exports, module) {
+    "../../../tmp/esb/node_modules/react/cjs/react.development.js"(exports, module) {
       "use strict";
       (function() {
         function defineDeprecationWarning(methodName, info) {
@@ -1297,9 +1297,9 @@
     }
   });
 
-  // node_modules/react/index.js
+  // ../../../tmp/esb/node_modules/react/index.js
   var require_react = __commonJS({
-    "node_modules/react/index.js"(exports, module) {
+    "../../../tmp/esb/node_modules/react/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -1309,9 +1309,9 @@
     }
   });
 
-  // node_modules/react-dom/cjs/react-dom.development.js
+  // ../../../tmp/esb/node_modules/react-dom/cjs/react-dom.development.js
   var require_react_dom_development = __commonJS({
-    "node_modules/react-dom/cjs/react-dom.development.js"(exports) {
+    "../../../tmp/esb/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
       "use strict";
       (function() {
         function noop() {
@@ -1564,9 +1564,9 @@
     }
   });
 
-  // node_modules/react-dom/index.js
+  // ../../../tmp/esb/node_modules/react-dom/index.js
   var require_react_dom = __commonJS({
-    "node_modules/react-dom/index.js"(exports, module) {
+    "../../../tmp/esb/node_modules/react-dom/index.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -1577,9 +1577,9 @@
     }
   });
 
-  // node_modules/react-dom/cjs/react-dom-client.development.js
+  // ../../../tmp/esb/node_modules/react-dom/cjs/react-dom-client.development.js
   var require_react_dom_client_development = __commonJS({
-    "node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
+    "../../../tmp/esb/node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
       "use strict";
       (function() {
         function findHook(fiber, id) {
@@ -23538,9 +23538,9 @@
     }
   });
 
-  // node_modules/react-dom/client.js
+  // ../../../tmp/esb/node_modules/react-dom/client.js
   var require_client = __commonJS({
-    "node_modules/react-dom/client.js"(exports, module) {
+    "../../../tmp/esb/node_modules/react-dom/client.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -23551,9 +23551,9 @@
     }
   });
 
-  // node_modules/react/cjs/react-jsx-runtime.development.js
+  // ../../../tmp/esb/node_modules/react/cjs/react-jsx-runtime.development.js
   var require_react_jsx_runtime_development = __commonJS({
-    "node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
+    "../../../tmp/esb/node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
       "use strict";
       (function() {
         function getComponentNameFromType(type) {
@@ -23822,9 +23822,9 @@
     }
   });
 
-  // node_modules/react/jsx-runtime.js
+  // ../../../tmp/esb/node_modules/react/jsx-runtime.js
   var require_jsx_runtime = __commonJS({
-    "node_modules/react/jsx-runtime.js"(exports, module) {
+    "../../../tmp/esb/node_modules/react/jsx-runtime.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -23912,16 +23912,7 @@
   function ChoiceRow({ label, options, value, onChange }) {
     return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "choice", children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "choice-label", children: label }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "choice-opts", children: options.map((o) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-        "button",
-        {
-          type: "button",
-          className: "choice-opt" + (o.value === value ? " sel" : ""),
-          onClick: () => onChange(o.value),
-          children: o.label
-        },
-        o.value
-      )) })
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "choice-opts", children: options.map((o) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "choice-opt" + (o.value === value ? " sel" : ""), onClick: () => onChange(o.value), children: o.label }, o.value)) })
     ] });
   }
   function FileButton({ variant, onClick, disabled, children }) {
@@ -24154,7 +24145,11 @@
       scoreLine: (c, total) => `\u05E2\u05E0\u05D9\u05EA \u05E0\u05DB\u05D5\u05DF \u05E2\u05DC ${c} \u05DE\u05EA\u05D5\u05DA ${total}`,
       setupSummary: (size, cat, dir) => `${size} \u05DE\u05D9\u05DC\u05D9\u05DD \xB7 ${cat} \xB7 ${dir}`,
       includesWotd: (w, m) => `\u05DB\u05D5\u05DC\u05DC \u05D0\u05EA \u05DE\u05D9\u05DC\u05EA \u05D4\u05D9\u05D5\u05DD: ${w} \xB7 ${m}`,
-      progressLine: (p, k, total) => `\u05E0\u05EA\u05E8\u05D2\u05DC\u05D5 ${p} \u05DE\u05EA\u05D5\u05DA ${total} \u05DE\u05D9\u05DC\u05D9\u05DD \xB7 ${k} \u05D1\u05E9\u05DC\u05D9\u05D8\u05D4`
+      progressLine: (p, k, total) => `\u05E0\u05EA\u05E8\u05D2\u05DC\u05D5 ${p} \u05DE\u05EA\u05D5\u05DA ${total} \u05DE\u05D9\u05DC\u05D9\u05DD \xB7 ${k} \u05D1\u05E9\u05DC\u05D9\u05D8\u05D4`,
+      goal: "\u05DE\u05D8\u05E8\u05EA \u05DC\u05D9\u05DE\u05D5\u05D3",
+      goalKhasi: "\u05DC\u05D5\u05DE\u05D3\u05D9\u05DD \u05E7\u05D4\u05D0\u05E1\u05D9",
+      goalHebrew: "\u05DC\u05D5\u05DE\u05D3\u05D9\u05DD \u05E2\u05D1\u05E8\u05D9\u05EA",
+      stamp: "\xA9 \u05DE\u05DC\u05D0\u05DB\u05D9 \u05D2\u05D5\u05DC\u05D3\u05E9\u05DE\u05D9\u05D3\u05D8 \u05D5\u05E8\u05D9\u05D9\u05E6'\u05DC \u05D2'\u05D5\u05D9\u05E1 \u05DC\u05D9\u05D9\u05D8\u05E4\u05DC\u05E0\u05D2 \xB7 2026"
     },
     en: {
       language: "Language",
@@ -24201,7 +24196,11 @@
       scoreLine: (c, total) => `You answered ${c} out of ${total} correctly`,
       setupSummary: (size, cat, dir) => `${size} words \xB7 ${cat} \xB7 ${dir}`,
       includesWotd: (w, m) => `Includes today's word: ${w} \xB7 ${m}`,
-      progressLine: (p, k, total) => `Practiced ${p} of ${total} words \xB7 ${k} mastered`
+      progressLine: (p, k, total) => `Practiced ${p} of ${total} words \xB7 ${k} mastered`,
+      goal: "Learning goal",
+      goalKhasi: "Learning Khasi",
+      goalHebrew: "Learning Hebrew",
+      stamp: "\xA9 Malachi Goldschmidt & Rachel Joyce Laitflang \xB7 2026"
     }
   };
   var CAT_STYLE = {
@@ -24231,7 +24230,7 @@
   };
   var cardKey = (e, dir) => dir + "|" + e.khasi + "|" + e.hebrew;
   var EMPTY_STATS = { correct: 0, total: 0, cards: {} };
-  function Dictionary({ lang, t, stats }) {
+  function Dictionary({ lang, t, stats, goal }) {
     const [query, setQuery] = (0, import_react2.useState)("");
     const [open, setOpen] = (0, import_react2.useState)({});
     const q = query.trim();
@@ -24254,11 +24253,15 @@
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "wotd-spark", children: "\u2728" }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "wotd-body", children: [
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "wotd-label", children: t.wotd }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "wotd-word", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "wotd-word", children: goal === "hebrew" ? /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "auto", children: localText(wotd, lang) }),
+            " \xB7 ",
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "ltr", children: wotd.khasi })
+          ] }) : /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "ltr", children: wotd.khasi }),
             " \xB7 ",
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "auto", children: localText(wotd, lang) })
-          ] })
+          ] }) })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Link, { className: "file-button is-compact", to: "/", children: t.practiceNow })
       ] }),
@@ -24277,22 +24280,23 @@
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "cat-count", children: rows.length }),
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: `cat-chevron${isOpen ? " open" : ""}`, children: "\u25BE" })
           ] }),
-          isOpen && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Rows, { children: rows.map((e) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Row, { name: localText(e, lang), value: e.khasi }, e.khasi + "|" + e.hebrew)) })
+          isOpen && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Rows, { children: rows.map((e) => goal === "hebrew" ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Row, { name: e.khasi, value: localText(e, lang) }, e.khasi + "|" + e.hebrew) : /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Row, { name: localText(e, lang), value: e.khasi }, e.khasi + "|" + e.hebrew)) })
         ] }, cat.id);
       }),
       q.length > 0 && !anyMatch && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Caption, { children: t.noMatch }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Photos, { label: t.photoLabel, items: [{ src: hero_default, alt: t.photoAlt }] })
     ] });
   }
-  function Practice({ lang, t, stats, setStats, savedStats }) {
-    const [prefs, setPrefs, savedPrefs] = useLocalState("khasi-practice-prefs.v2", { direction: "kh2local", category: "all", size: 10 });
+  function Practice({ lang, t, stats, setStats, savedStats, goal }) {
+    const [prefs, setPrefs, savedPrefs] = useLocalState("khasi-practice-prefs.v2", { direction: null, category: "all", size: 10 });
+    const effDirection = prefs.direction ?? (goal === "hebrew" ? "local2kh" : "kh2local");
     const [round, setRound] = (0, import_react2.useState)(null);
     const [answer, setAnswer] = (0, import_react2.useState)("");
     const [feedback, setFeedback] = (0, import_react2.useState)(null);
     const [showSettings, setShowSettings] = (0, import_react2.useState)(false);
     const pool = (0, import_react2.useMemo)(() => ENTRIES.filter((e) => prefs.category === "all" || e.category === prefs.category), [prefs.category]);
     const current = round && !round.done && round.idx < round.deck.length ? round.deck[round.idx] : null;
-    const resolveDir = () => prefs.direction === "mix" ? Math.random() < 0.5 ? "kh2local" : "local2kh" : prefs.direction;
+    const resolveDir = () => effDirection === "mix" ? Math.random() < 0.5 ? "kh2local" : "local2kh" : effDirection;
     const buildDeck = (fromCards) => {
       let deck;
       if (fromCards && fromCards.length) {
@@ -24382,7 +24386,7 @@
     const prompt = current ? current.dir === "kh2local" ? current.entry.khasi : localText(current.entry, lang) : "";
     const isLast = round ? round.idx + 1 >= round.deck.length : false;
     const misses = round ? round.deck.map((rc, i) => ({ rc, i })).filter((x) => round.results[x.i] === "w" || round.results[x.i] === "s") : [];
-    const dirLabel = prefs.direction === "mix" ? t.mix : prefs.direction === "kh2local" ? t.kh2local : t.local2kh;
+    const dirLabel = effDirection === "mix" ? t.mix : effDirection === "kh2local" ? t.kh2local : t.local2kh;
     const catSummary = prefs.category === "all" ? t.all : catName(prefs.category, lang);
     return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
       !round && /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
@@ -24406,7 +24410,7 @@
             { value: "kh2local", label: t.kh2local },
             { value: "local2kh", label: t.local2kh },
             { value: "mix", label: t.mix }
-          ], value: prefs.direction, onChange: (v) => resetPrefs({ direction: v }) }),
+          ], value: effDirection, onChange: (v) => resetPrefs({ direction: v }) }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ChoiceRow, { label: t.category, options: [{ value: "all", label: t.all }, ...CATEGORIES.map((c) => ({ value: c.id, label: `${CAT_STYLE[c.id].emoji} ${catName(c.id, lang)}` }))], value: prefs.category, onChange: (v) => resetPrefs({ category: v }) }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ChoiceRow, { label: t.roundSize, options: [{ value: "5", label: "5" }, { value: "10", label: "10" }, { value: "15", label: "15" }], value: String(prefs.size ?? 10), onChange: (v) => resetPrefs({ size: parseInt(v, 10) }) })
         ] })
@@ -24504,8 +24508,10 @@
   var OPENSANS_CSS = "@font-face{font-family:'Open Sans';font-style:normal;font-weight:300 800;font-display:swap;src:url(data:font/woff2;base64," + OPENSANS_LATIN + ") format('woff2');unicode-range:" + OPENSANS_LATIN_RANGE + "}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300 800;font-display:swap;src:url(data:font/woff2;base64," + OPENSANS_HEBREW + ") format('woff2');unicode-range:" + OPENSANS_HEBREW_RANGE + "}";
   function App() {
     const [langRaw, setLang, savedLang] = useLocalState("khasi-dict-lang.v1", "he");
+    const [goalRaw, setGoal, savedGoal] = useLocalState("khasi-dict-goal.v1", "khasi");
     const [stats, setStats, savedStats] = useLocalState("khasi-practice-stats.v1", EMPTY_STATS);
     const lang = langRaw === "en" ? "en" : "he";
+    const goal = goalRaw === "hebrew" ? "hebrew" : "khasi";
     const t = STR[lang];
     return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(FileCard, { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { dir: lang === "he" ? "rtl" : "ltr", className: "khasi-page", children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("style", { children: OPENSANS_CSS }),
@@ -24514,16 +24520,21 @@
         if (savedLang.ready) setLang(v);
       } }),
       savedLang.message ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Caption, { children: savedLang.message }) : null,
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ChoiceRow, { label: t.goal, options: [{ value: "khasi", label: t.goalKhasi }, { value: "hebrew", label: t.goalHebrew }], value: goal, onChange: (v) => {
+        if (savedGoal.ready) setGoal(v);
+      } }),
+      savedGoal.message ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Caption, { children: savedGoal.message }) : null,
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("nav", { className: "file-nav", "aria-label": t.navAria, children: [
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(NavLink, { to: "/", end: true, children: t.practice }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(NavLink, { to: "/dictionary", children: t.dictionary })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(Routes, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Practice, { lang, t, stats, setStats, savedStats }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/practice", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Practice, { lang, t, stats, setStats, savedStats }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/dictionary", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Dictionary, { lang, t, stats }) })
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Practice, { lang, t, stats, setStats, savedStats, goal }, goal) }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/practice", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Practice, { lang, t, stats, setStats, savedStats, goal }, goal) }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/dictionary", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Dictionary, { lang, t, stats, goal }) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Closing, { children: t.closing(ENTRIES.length, updatedLabel(lang)) })
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Closing, { children: t.closing(ENTRIES.length, updatedLabel(lang)) }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "stamp", children: t.stamp })
     ] }) });
   }
 

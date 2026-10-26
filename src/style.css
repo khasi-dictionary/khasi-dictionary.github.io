@@ -1,0 +1,57 @@
+html, body, #root { margin: 0; min-height: 100%; }
+body { background: var(--ds-page); }
+.file-nav { display: flex; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid var(--ds-hairline); }
+.file-nav a { padding: 10px 0; color: var(--ds-ink-2); text-decoration: none; }
+.file-nav a[aria-current="page"] { color: var(--ds-ink); box-shadow: inset 0 -1px 0 var(--ds-ink); }
+@media (max-width: 600px) { .file-nav a { display: inline-flex; align-items: center; min-height: 44px; } }
+
+.khasi-page[dir="rtl"] { direction: rtl; }
+.khasi-page[dir="ltr"] { direction: ltr; }
+.khasi-page input, .khasi-page textarea { unicode-bidi: plaintext; }
+.fc-card { border: 1px solid var(--ds-hairline); border-radius: 12px; padding: 20px; margin: 16px 0; display: flex; flex-direction: column; gap: 16px; }
+.fc-eyebrow { color: var(--ds-ink-2); font-size: 12px; }
+.fc-prompt { font-size: 28px; font-weight: 600; line-height: 1.35; }
+.fc-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.fc-ok { color: var(--ds-teal); font-weight: 600; margin: 0; }
+.fc-bad { color: var(--ds-red); font-weight: 600; margin: 0; }
+.fc-expected { font-weight: 400; color: var(--ds-ink); }
+
+.wotd { display: flex; gap: 14px; align-items: center; background: linear-gradient(120deg, #fdf0e2, #e2f0ec); border-radius: 16px; padding: 16px 20px; margin: 4px 0 8px; }
+.wotd-spark { font-size: 28px; }
+.wotd-label { color: var(--ds-ink-2); font-size: 12px; }
+.wotd-word { font-size: 20px; font-weight: 600; }
+.fc-progress { display: flex; gap: 4px; }
+.fc-seg { flex: 1; height: 6px; border-radius: 3px; background: var(--ds-hairline); }
+.fc-seg.c { background: var(--ds-teal); }
+.fc-seg.w { background: var(--ds-red); }
+.fc-seg.s { background: #d8cfc9; }
+.fc-seg.cur { outline: 2px solid var(--ds-ink); outline-offset: 1px; }
+.fc-chip { color: #fff; border-radius: 999px; padding: 3px 10px; font-size: 12px; font-weight: 600; }
+.fc-eyebrow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.fc-score { text-align: center; padding: 12px 0 4px; display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.fc-score-emoji { font-size: 40px; }
+.fc-score-title { font-size: 21px; font-weight: 600; }
+.fc-score-num { font-size: 48px; font-weight: 700; }
+.fc-score-of { font-size: 24px; color: var(--ds-ink-2); }
+.fc-score-line { color: var(--ds-ink-2); }
+
+.wotd-body { flex: 1; }
+.search-wrap { margin: 12px 0 4px; }
+.cat { margin: 4px 0; }
+.cat-head { width: 100%; display: flex; align-items: center; gap: 10px; background: none; border: none; border-bottom: 1px solid var(--ds-hairline); padding: 12px 2px; cursor: pointer; font-size: 18px; font-weight: 600; color: var(--ds-ink); text-align: start; min-height: 44px; }
+.cat-name { flex: 1; }
+.cat-count { color: var(--ds-ink-2); font-size: 13px; font-weight: 400; background: var(--ds-raised); border-radius: 999px; padding: 2px 10px; }
+.cat-chevron { color: var(--ds-ink-2); transition: transform .15s ease; display: inline-block; }
+.cat-chevron.open { transform: rotate(180deg); }
+.start-card { background: linear-gradient(120deg, #e2f0ec, #fdf0e2); border-radius: 16px; padding: 24px 20px; display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; margin: 16px 0; }
+.start-emoji { font-size: 36px; }
+.start-title { font-size: 21px; font-weight: 600; }
+.start-summary { color: var(--ds-ink-2); font-size: 13px; }
+.settings-toggle { background: none; border: none; color: var(--ds-ink-2); font-size: 14px; cursor: pointer; padding: 10px 2px; display: flex; gap: 6px; align-items: center; min-height: 44px; }
+.fc-review { border-top: 1px solid var(--ds-hairline); padding-top: 12px; display: flex; flex-direction: column; gap: 6px; width: 100%; text-align: start; }
+.fc-review-title { font-weight: 600; }
+.fc-review-correct { color: var(--ds-teal); font-weight: 600; }
+.fc-review-yours { color: var(--ds-ink-2); font-size: 13px; }
+.start-wotd { font-size: 13px; color: #6b6258; }
+
+.stamp { text-align: center; color: var(--ds-ink-2); font-size: 12px; margin: 4px 0 10px; }

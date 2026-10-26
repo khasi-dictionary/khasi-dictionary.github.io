@@ -286,6 +286,12 @@ body {
   font-size: 13px;
   color: #6b6258;
 }
+.stamp {
+  text-align: center;
+  color: var(--ds-ink-2);
+  font-size: 12px;
+  margin: 4px 0 10px;
+}
 
 /* src/standalone.css */
 :root {
