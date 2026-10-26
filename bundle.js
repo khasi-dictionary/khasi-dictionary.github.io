@@ -29,9 +29,9 @@
     mod
   ));
 
-  // ../../../tmp/esb/node_modules/scheduler/cjs/scheduler.development.js
+  // ../esb/node_modules/scheduler/cjs/scheduler.development.js
   var require_scheduler_development = __commonJS({
-    "../../../tmp/esb/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
+    "../esb/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
       "use strict";
       (function() {
         function performWorkUntilDeadline() {
@@ -288,9 +288,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/scheduler/index.js
+  // ../esb/node_modules/scheduler/index.js
   var require_scheduler = __commonJS({
-    "../../../tmp/esb/node_modules/scheduler/index.js"(exports, module) {
+    "../esb/node_modules/scheduler/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -300,9 +300,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/react/cjs/react.development.js
+  // ../esb/node_modules/react/cjs/react.development.js
   var require_react_development = __commonJS({
-    "../../../tmp/esb/node_modules/react/cjs/react.development.js"(exports, module) {
+    "../esb/node_modules/react/cjs/react.development.js"(exports, module) {
       "use strict";
       (function() {
         function defineDeprecationWarning(methodName, info) {
@@ -1297,9 +1297,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/react/index.js
+  // ../esb/node_modules/react/index.js
   var require_react = __commonJS({
-    "../../../tmp/esb/node_modules/react/index.js"(exports, module) {
+    "../esb/node_modules/react/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -1309,9 +1309,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/react-dom/cjs/react-dom.development.js
+  // ../esb/node_modules/react-dom/cjs/react-dom.development.js
   var require_react_dom_development = __commonJS({
-    "../../../tmp/esb/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
+    "../esb/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
       "use strict";
       (function() {
         function noop() {
@@ -1564,9 +1564,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/react-dom/index.js
+  // ../esb/node_modules/react-dom/index.js
   var require_react_dom = __commonJS({
-    "../../../tmp/esb/node_modules/react-dom/index.js"(exports, module) {
+    "../esb/node_modules/react-dom/index.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -1577,9 +1577,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/react-dom/cjs/react-dom-client.development.js
+  // ../esb/node_modules/react-dom/cjs/react-dom-client.development.js
   var require_react_dom_client_development = __commonJS({
-    "../../../tmp/esb/node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
+    "../esb/node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
       "use strict";
       (function() {
         function findHook(fiber, id) {
@@ -23538,9 +23538,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/react-dom/client.js
+  // ../esb/node_modules/react-dom/client.js
   var require_client = __commonJS({
-    "../../../tmp/esb/node_modules/react-dom/client.js"(exports, module) {
+    "../esb/node_modules/react-dom/client.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -23551,9 +23551,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/react/cjs/react-jsx-runtime.development.js
+  // ../esb/node_modules/react/cjs/react-jsx-runtime.development.js
   var require_react_jsx_runtime_development = __commonJS({
-    "../../../tmp/esb/node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
+    "../esb/node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
       "use strict";
       (function() {
         function getComponentNameFromType(type) {
@@ -23822,9 +23822,9 @@
     }
   });
 
-  // ../../../tmp/esb/node_modules/react/jsx-runtime.js
+  // ../esb/node_modules/react/jsx-runtime.js
   var require_jsx_runtime = __commonJS({
-    "../../../tmp/esb/node_modules/react/jsx-runtime.js"(exports, module) {
+    "../esb/node_modules/react/jsx-runtime.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -24146,9 +24146,6 @@
       setupSummary: (size, cat, dir) => `${size} \u05DE\u05D9\u05DC\u05D9\u05DD \xB7 ${cat} \xB7 ${dir}`,
       includesWotd: (w, m) => `\u05DB\u05D5\u05DC\u05DC \u05D0\u05EA \u05DE\u05D9\u05DC\u05EA \u05D4\u05D9\u05D5\u05DD: ${w} \xB7 ${m}`,
       progressLine: (p, k, total) => `\u05E0\u05EA\u05E8\u05D2\u05DC\u05D5 ${p} \u05DE\u05EA\u05D5\u05DA ${total} \u05DE\u05D9\u05DC\u05D9\u05DD \xB7 ${k} \u05D1\u05E9\u05DC\u05D9\u05D8\u05D4`,
-      goal: "\u05DE\u05D8\u05E8\u05EA \u05DC\u05D9\u05DE\u05D5\u05D3",
-      goalKhasi: "\u05DC\u05D5\u05DE\u05D3\u05D9\u05DD \u05E7\u05D4\u05D0\u05E1\u05D9",
-      goalHebrew: "\u05DC\u05D5\u05DE\u05D3\u05D9\u05DD \u05E2\u05D1\u05E8\u05D9\u05EA",
       stamp: "\xA9 \u05DE\u05DC\u05D0\u05DB\u05D9 \u05D2\u05D5\u05DC\u05D3\u05E9\u05DE\u05D9\u05D3\u05D8 \u05D5\u05E8\u05D9\u05D9\u05E6'\u05DC \u05D2'\u05D5\u05D9\u05E1 \u05DC\u05D9\u05D9\u05D8\u05E4\u05DC\u05E0\u05D2 \xB7 2026"
     },
     en: {
@@ -24197,9 +24194,6 @@
       setupSummary: (size, cat, dir) => `${size} words \xB7 ${cat} \xB7 ${dir}`,
       includesWotd: (w, m) => `Includes today's word: ${w} \xB7 ${m}`,
       progressLine: (p, k, total) => `Practiced ${p} of ${total} words \xB7 ${k} mastered`,
-      goal: "Learning goal",
-      goalKhasi: "Learning Khasi",
-      goalHebrew: "Learning Hebrew",
       stamp: "\xA9 Malachi Goldschmidt & Rachel Joyce Laitflang \xB7 2026"
     }
   };
@@ -24230,7 +24224,7 @@
   };
   var cardKey = (e, dir) => dir + "|" + e.khasi + "|" + e.hebrew;
   var EMPTY_STATS = { correct: 0, total: 0, cards: {} };
-  function Dictionary({ lang, t, stats, goal }) {
+  function Dictionary({ lang, t, stats }) {
     const [query, setQuery] = (0, import_react2.useState)("");
     const [open, setOpen] = (0, import_react2.useState)({});
     const q = query.trim();
@@ -24253,15 +24247,11 @@
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "wotd-spark", children: "\u2728" }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "wotd-body", children: [
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "wotd-label", children: t.wotd }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "wotd-word", children: goal === "hebrew" ? /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "auto", children: localText(wotd, lang) }),
-            " \xB7 ",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "ltr", children: wotd.khasi })
-          ] }) : /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(import_jsx_runtime2.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "wotd-word", children: [
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "ltr", children: wotd.khasi }),
             " \xB7 ",
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "auto", children: localText(wotd, lang) })
-          ] }) })
+          ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Link, { className: "file-button is-compact", to: "/", children: t.practiceNow })
       ] }),
@@ -24280,15 +24270,15 @@
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "cat-count", children: rows.length }),
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: `cat-chevron${isOpen ? " open" : ""}`, children: "\u25BE" })
           ] }),
-          isOpen && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Rows, { children: rows.map((e) => goal === "hebrew" ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Row, { name: e.khasi, value: localText(e, lang) }, e.khasi + "|" + e.hebrew) : /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Row, { name: localText(e, lang), value: e.khasi }, e.khasi + "|" + e.hebrew)) })
+          isOpen && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Rows, { children: rows.map((e) => /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Row, { name: localText(e, lang), value: e.khasi }, e.khasi + "|" + e.hebrew)) })
         ] }, cat.id);
       }),
       q.length > 0 && !anyMatch && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Caption, { children: t.noMatch }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Photos, { label: t.photoLabel, items: [{ src: hero_default, alt: t.photoAlt }] })
     ] });
   }
-  function Practice({ lang, t, stats, setStats, savedStats, goal }) {
-    const [prefs, setPrefs, savedPrefs] = useLocalState("khasi-practice-prefs.v2", { direction: null, category: "all", size: 10 });
+  function Practice({ lang, t, stats, setStats, savedStats }) {
+    const [prefs, setPrefs, savedPrefs] = useLocalState("khasi-practice-prefs.v2", { direction: "kh2local", category: "all", size: 10 });
     const effDirection = prefs.direction ?? "kh2local";
     const [round, setRound] = (0, import_react2.useState)(null);
     const [answer, setAnswer] = (0, import_react2.useState)("");
@@ -24508,10 +24498,8 @@
   var OPENSANS_CSS = "@font-face{font-family:'Open Sans';font-style:normal;font-weight:300 800;font-display:swap;src:url(data:font/woff2;base64," + OPENSANS_LATIN + ") format('woff2');unicode-range:" + OPENSANS_LATIN_RANGE + "}@font-face{font-family:'Open Sans';font-style:normal;font-weight:300 800;font-display:swap;src:url(data:font/woff2;base64," + OPENSANS_HEBREW + ") format('woff2');unicode-range:" + OPENSANS_HEBREW_RANGE + "}";
   function App() {
     const [langRaw, setLang, savedLang] = useLocalState("khasi-dict-lang.v1", "he");
-    const [goalRaw, setGoal, savedGoal] = useLocalState("khasi-dict-goal.v1", "khasi");
     const [stats, setStats, savedStats] = useLocalState("khasi-practice-stats.v1", EMPTY_STATS);
     const lang = langRaw === "en" ? "en" : "he";
-    const goal = goalRaw === "hebrew" ? "hebrew" : "khasi";
     const t = STR[lang];
     return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(FileCard, { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { dir: lang === "he" ? "rtl" : "ltr", className: "khasi-page", children: [
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("style", { children: OPENSANS_CSS }),
@@ -24520,18 +24508,14 @@
         if (savedLang.ready) setLang(v);
       } }),
       savedLang.message ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Caption, { children: savedLang.message }) : null,
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(ChoiceRow, { label: t.goal, options: [{ value: "khasi", label: t.goalKhasi }, { value: "hebrew", label: t.goalHebrew }], value: goal, onChange: (v) => {
-        if (savedGoal.ready) setGoal(v);
-      } }),
-      savedGoal.message ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Caption, { children: savedGoal.message }) : null,
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("nav", { className: "file-nav", "aria-label": t.navAria, children: [
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(NavLink, { to: "/", end: true, children: t.practice }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(NavLink, { to: "/dictionary", children: t.dictionary })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)(Routes, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Practice, { lang, t, stats, setStats, savedStats, goal }, goal) }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/practice", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Practice, { lang, t, stats, setStats, savedStats, goal }, goal) }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/dictionary", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Dictionary, { lang, t, stats, goal }) })
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Practice, { lang, t, stats, setStats, savedStats }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/practice", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Practice, { lang, t, stats, setStats, savedStats }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Route, { path: "/dictionary", element: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Dictionary, { lang, t, stats }) })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Closing, { children: t.closing(ENTRIES.length, updatedLabel(lang)) }),
       /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "stamp", children: t.stamp })

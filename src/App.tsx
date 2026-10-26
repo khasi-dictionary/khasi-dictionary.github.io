@@ -21,7 +21,7 @@ interface Strings {
     setupSummary: (size: number, cat: string, dir: string) => string;
     includesWotd: (w: string, m: string) => string;
     progressLine: (practiced: number, known: number, total: number) => string;
-    goal: string; goalKhasi: string; goalHebrew: string; stamp: string;
+    stamp: string;
 }
 
 const STR: Record<Lang, Strings> = {
@@ -46,7 +46,6 @@ const STR: Record<Lang, Strings> = {
         setupSummary: (size, cat, dir) => `${size} מילים · ${cat} · ${dir}`,
         includesWotd: (w, m) => `כולל את מילת היום: ${w} · ${m}`,
         progressLine: (p, k, total) => `נתרגלו ${p} מתוך ${total} מילים · ${k} בשליטה`,
-        goal: 'מטרת לימוד', goalKhasi: 'לומדים קהאסי', goalHebrew: 'לומדים עברית',
         stamp: "© מלאכי גולדשמידט ורייצ'ל ג'ויס לייטפלנג · 2026",
     },
     en: {
@@ -70,7 +69,6 @@ const STR: Record<Lang, Strings> = {
         setupSummary: (size, cat, dir) => `${size} words · ${cat} · ${dir}`,
         includesWotd: (w, m) => `Includes today's word: ${w} · ${m}`,
         progressLine: (p, k, total) => `Practiced ${p} of ${total} words · ${k} mastered`,
-        goal: 'Learning goal', goalKhasi: 'Learning Khasi', goalHebrew: 'Learning Hebrew',
         stamp: '© Malachi Goldschmidt & Rachel Joyce Laitflang · 2026',
     },
 };
@@ -106,13 +104,12 @@ const wordOfTheDay = (): Entry => {
 };
 
 type CardDir = 'kh2local' | 'local2kh';
-type Goal = 'khasi' | 'hebrew';
 const cardKey = (e: Entry, dir: CardDir) => dir + '|' + e.khasi + '|' + e.hebrew;
 
 interface Stats { correct: number; total: number; cards: Record<string, { c: number; w: number }>; }
 const EMPTY_STATS: Stats = { correct: 0, total: 0, cards: {} };
 
-function Dictionary({ lang, t, stats, goal }: { lang: Lang; t: Strings; stats: Stats; goal: Goal }) {
+function Dictionary({ lang, t, stats }: { lang: Lang; t: Strings; stats: Stats }) {
     const [query, setQuery] = useState('');
     const [open, setOpen] = useState<Record<string, boolean>>({});
     const q = query.trim();
@@ -138,9 +135,7 @@ function Dictionary({ lang, t, stats, goal }: { lang: Lang; t: Strings; stats: S
             <span className="wotd-spark">✨</span>
             <div className="wotd-body">
                 <div className="wotd-label">{t.wotd}</div>
-                <div className="wotd-word">{goal === 'hebrew'
-                    ? <><span dir="auto">{localText(wotd, lang)}</span> · <span dir="ltr">{wotd.khasi}</span></>
-                    : <><span dir="ltr">{wotd.khasi}</span> · <span dir="auto">{localText(wotd, lang)}</span></>}</div>
+                <div className="wotd-word"><span dir="ltr">{wotd.khasi}</span> · <span dir="auto">{localText(wotd, lang)}</span></div>
             </div>
             <Link className="file-button is-compact" to="/">{t.practiceNow}</Link>
         </div>
@@ -160,9 +155,7 @@ function Dictionary({ lang, t, stats, goal }: { lang: Lang; t: Strings; stats: S
                     <span className={`cat-chevron${isOpen ? ' open' : ''}`}>▾</span>
                 </button>
                 {isOpen && <Rows>
-                    {rows.map(e => goal === 'hebrew'
-                        ? <Row key={e.khasi + '|' + e.hebrew} name={e.khasi} value={localText(e, lang)} />
-                        : <Row key={e.khasi + '|' + e.hebrew} name={localText(e, lang)} value={e.khasi} />)}
+                    {rows.map(e => <Row key={e.khasi + '|' + e.hebrew} name={localText(e, lang)} value={e.khasi} />)}
                 </Rows>}
             </section>;
         })}
@@ -174,11 +167,9 @@ function Dictionary({ lang, t, stats, goal }: { lang: Lang; t: Strings; stats: S
 interface RoundCard { entry: Entry; dir: CardDir; }
 interface Round { deck: RoundCard[]; idx: number; correct: number; results: ('c' | 'w' | 's' | null)[]; answers: (string | null)[]; done: boolean; }
 
-function Practice({ lang, t, stats, setStats, savedStats, goal }: { lang: Lang; t: Strings; stats: Stats; setStats: (s: Stats) => void; savedStats: { ready: boolean; message?: string }; goal: Goal }) {
-    const [prefs, setPrefs, savedPrefs] = useLocalState('khasi-practice-prefs.v2', { direction: null as string | null, category: 'all', size: 10 });
-    // Default practice direction is Khasi prompt -> answer in the local language (מקהאסי לעברית).
-    // For Khasi speakers learning Hebrew (goal 'hebrew') this is exactly the requested flow:
-    // they see the Khasi word they know and type the Hebrew they are learning.
+function Practice({ lang, t, stats, setStats, savedStats }: { lang: Lang; t: Strings; stats: Stats; setStats: (s: Stats) => void; savedStats: { ready: boolean; message?: string } }) {
+    const [prefs, setPrefs, savedPrefs] = useLocalState('khasi-practice-prefs.v2', { direction: 'kh2local', category: 'all', size: 10 });
+    // Default direction: Khasi prompt -> answer in the local language (מקהאסי לעברית). ?? guard covers any stored null.
     const effDirection = prefs.direction ?? 'kh2local';
     const [round, setRound] = useState<Round | null>(null);
     const [answer, setAnswer] = useState('');
@@ -360,10 +351,8 @@ const OPENSANS_CSS = '@font-face{font-family:\'Open Sans\';font-style:normal;fon
 
 export function App() {
     const [langRaw, setLang, savedLang] = useLocalState('khasi-dict-lang.v1', 'he');
-    const [goalRaw, setGoal, savedGoal] = useLocalState('khasi-dict-goal.v1', 'khasi');
     const [stats, setStats, savedStats] = useLocalState('khasi-practice-stats.v1', EMPTY_STATS);
     const lang: Lang = langRaw === 'en' ? 'en' : 'he';
-    const goal: Goal = goalRaw === 'hebrew' ? 'hebrew' : 'khasi';
     const t = STR[lang];
     return <FileCard>
         <div dir={lang === 'he' ? 'rtl' : 'ltr'} className="khasi-page">
@@ -371,13 +360,11 @@ export function App() {
             <Header title={t.title} intro={t.intro} />
             <ChoiceRow label={t.language} options={[{ value: 'he', label: 'עברית' }, { value: 'en', label: 'English' }]} value={lang} onChange={v => { if (savedLang.ready) setLang(v); }} />
             {savedLang.message ? <Caption>{savedLang.message}</Caption> : null}
-            <ChoiceRow label={t.goal} options={[{ value: 'khasi', label: t.goalKhasi }, { value: 'hebrew', label: t.goalHebrew }]} value={goal} onChange={v => { if (savedGoal.ready) setGoal(v); }} />
-            {savedGoal.message ? <Caption>{savedGoal.message}</Caption> : null}
             <nav className="file-nav" aria-label={t.navAria}><NavLink to="/" end>{t.practice}</NavLink><NavLink to="/dictionary">{t.dictionary}</NavLink></nav>
             <Routes>
-                <Route path="/" element={<Practice key={goal} lang={lang} t={t} stats={stats} setStats={setStats} savedStats={savedStats} goal={goal} />} />
-                <Route path="/practice" element={<Practice key={goal} lang={lang} t={t} stats={stats} setStats={setStats} savedStats={savedStats} goal={goal} />} />
-                <Route path="/dictionary" element={<Dictionary lang={lang} t={t} stats={stats} goal={goal} />} />
+                <Route path="/" element={<Practice lang={lang} t={t} stats={stats} setStats={setStats} savedStats={savedStats} />} />
+                <Route path="/practice" element={<Practice lang={lang} t={t} stats={stats} setStats={setStats} savedStats={savedStats} />} />
+                <Route path="/dictionary" element={<Dictionary lang={lang} t={t} stats={stats} />} />
             </Routes>
             <Closing>{t.closing(ENTRIES.length, updatedLabel(lang))}</Closing>
             <div className="stamp">{t.stamp}</div>
