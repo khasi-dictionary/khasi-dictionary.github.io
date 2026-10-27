@@ -53,6 +53,7 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Shuki', hebrew: 'כיסא', english: 'Chair', category: 'furnitures' },
     { khasi: 'Pliang', hebrew: 'צלחת / צלחות', english: 'plate / plates', category: 'others', added: '2026-10-26' },
     { khasi: 'Jrong', hebrew: 'גבוה/ארוך', english: 'tall / long', category: 'adjectives' },
+    { khasi: 'Sat', hebrew: 'חריף', english: 'spicy', category: 'adjectives', added: '2026-10-27' },
 
     { khasi: 'Syntiew', hebrew: 'פרחים', english: 'Flowers', category: 'others' },
     { khasi: 'Thiah', hebrew: 'לישון', english: 'To sleep', category: 'others' },
