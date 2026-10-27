@@ -144,6 +144,7 @@ export function englishAnswers(english: string): string[] {
 const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Thiah suk|greetings': { he: ['תישן טוב'] },
     'Doh syiar|jingbam': { he: ['בשר עוף'] },
+    'Doh masi|jingbam': { he: ['בשר'] },
     'Ieit|others': { he: ['אוהב', 'אוהבת'] },
     'Phan|jingbam': { he: ['תפוח אדמה', 'תפוחי אדמה', 'תפוד'], en: ['potatoes'] },
     'Jhur|jingbam': { he: ['ירק'], en: ['vegetable'] },
