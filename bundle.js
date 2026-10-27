@@ -23956,8 +23956,8 @@
   ];
   var ENTRIES = [
     { khasi: "Thiah suk", hebrew: "\u05DC\u05D9\u05DC\u05D4 \u05D8\u05D5\u05D1 (\u05DE\u05D9\u05DC\u05D5\u05DC\u05D9\u05EA: \u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1)", english: "Good night (literally: sleep well)", category: "greetings" },
-    { khasi: "Kumno", hebrew: "\u05E9\u05DC\u05D5\u05DD (\u05E4\u05D5\u05E0\u05D4)", english: "Hello (greeting)", category: "greetings" },
-    { khasi: "Kumne", hebrew: "\u05E9\u05DC\u05D5\u05DD (\u05DE\u05E9\u05D9\u05D1)", english: "Hello (response)", category: "greetings" },
+    { khasi: "Kumno", hebrew: "\u05E9\u05DC\u05D5\u05DD (\u05E4\u05D5\u05E0\u05D4) / \u05D0\u05D9\u05DA? (\u05DE\u05D9\u05DC\u05D5\u05DC\u05D9\u05EA)", english: "Hello (greeting) / How? (literally)", category: "greetings" },
+    { khasi: "Kumne", hebrew: "\u05E9\u05DC\u05D5\u05DD (\u05DE\u05E9\u05D9\u05D1) / \u05DB\u05DB\u05D4 (\u05DE\u05D9\u05DC\u05D5\u05DC\u05D9\u05EA)", english: "Hello (response) / Like this (literally)", category: "greetings" },
     { khasi: "Khublei", hebrew: "\u05EA\u05D5\u05D3\u05D4", english: "Thank you", category: "greetings" },
     { khasi: "Map", hebrew: "\u05E1\u05DC\u05D9\u05D7\u05D4", english: "Sorry / excuse me", category: "greetings" },
     { khasi: "Jingbam", hebrew: "\u05D0\u05D5\u05DB\u05DC", english: "Food", category: "jingbam" },

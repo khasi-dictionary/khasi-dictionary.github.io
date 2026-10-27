@@ -14,8 +14,8 @@ export const CATEGORIES: Category[] = [
 
 export const ENTRIES: Entry[] = [
     { khasi: 'Thiah suk', hebrew: 'לילה טוב (מילולית: תישן טוב)', english: 'Good night (literally: sleep well)', category: 'greetings' },
-    { khasi: 'Kumno', hebrew: 'שלום (פונה)', english: 'Hello (greeting)', category: 'greetings' },
-    { khasi: 'Kumne', hebrew: 'שלום (משיב)', english: 'Hello (response)', category: 'greetings' },
+    { khasi: 'Kumno', hebrew: 'שלום (פונה) / איך? (מילולית)', english: 'Hello (greeting) / How? (literally)', category: 'greetings' },
+    { khasi: 'Kumne', hebrew: 'שלום (משיב) / ככה (מילולית)', english: 'Hello (response) / Like this (literally)', category: 'greetings' },
     { khasi: 'Khublei', hebrew: 'תודה', english: 'Thank you', category: 'greetings' },
     { khasi: 'Map', hebrew: 'סליחה', english: 'Sorry / excuse me', category: 'greetings' },
 
