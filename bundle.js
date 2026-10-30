@@ -23993,6 +23993,7 @@
     { khasi: "Pliang", hebrew: "\u05E6\u05DC\u05D7\u05EA / \u05E6\u05DC\u05D7\u05D5\u05EA", english: "plate / plates", category: "others", added: "2026-10-26" },
     { khasi: "Proh", hebrew: "\u05DE\u05D6\u05DC\u05D2", english: "fork", category: "others", added: "2026-10-28" },
     { khasi: "Tari", hebrew: "\u05E1\u05DB\u05D9\u05DF/\u05E1\u05DB\u05D9\u05E0\u05D9\u05DD", english: "knife / knives", category: "others", added: "2026-10-29" },
+    { khasi: "Shamoit", hebrew: "\u05DB\u05E3/\u05DB\u05E4\u05D9\u05EA/\u05DB\u05E4\u05D5\u05EA/\u05DB\u05E4\u05D9\u05D5\u05EA", english: "spoon / teaspoon / spoons / teaspoons", category: "others", added: "2026-10-30" },
     { khasi: "Jrong", hebrew: "\u05D2\u05D1\u05D5\u05D4/\u05D0\u05E8\u05D5\u05DA", english: "tall / long", category: "adjectives" },
     { khasi: "Sat", hebrew: "\u05D7\u05E8\u05D9\u05E3", english: "spicy", category: "adjectives", added: "2026-10-27" },
     { khasi: "Syntiew", hebrew: "\u05E4\u05E8\u05D7\u05D9\u05DD", english: "Flowers", category: "others" },
