@@ -18,6 +18,7 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Kumne', hebrew: 'שלום (משיב) / ככה (מילולית)', english: 'Hello (response) / Like this (literally)', category: 'greetings' },
     { khasi: 'Khublei', hebrew: 'תודה', english: 'Thank you', category: 'greetings' },
     { khasi: 'Map', hebrew: 'סליחה', english: 'Sorry / excuse me', category: 'greetings' },
+    { khasi: 'Bang bha', hebrew: 'טעים מאוד (מחמאה על האוכל)', english: 'Very tasty (food compliment)', category: 'greetings' },
 
     { khasi: 'Jingbam', hebrew: 'אוכל', english: 'Food', category: 'jingbam' },
     { khasi: 'Doh syiar', hebrew: 'עוף', english: 'Chicken meat', category: 'jingbam' },
@@ -55,8 +56,10 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Proh', hebrew: 'מזלג', english: 'fork', category: 'others', added: '2026-10-28' },
     { khasi: 'Tari', hebrew: 'סכין/סכינים', english: 'knife / knives', category: 'others', added: '2026-10-29' },
     { khasi: 'Shamoit', hebrew: 'כף/כפית/כפות/כפיות', english: 'spoon / teaspoon / spoons / teaspoons', category: 'others', added: '2026-10-30' },
+    { khasi: 'Bha', hebrew: 'מאוד', english: 'very', category: 'others' },
     { khasi: 'Jrong', hebrew: 'גבוה/ארוך', english: 'tall / long', category: 'adjectives' },
     { khasi: 'Sat', hebrew: 'חריף', english: 'spicy', category: 'adjectives', added: '2026-10-27' },
+    { khasi: 'Bang', hebrew: 'טעים', english: 'tasty', category: 'adjectives' },
 
     { khasi: 'Syntiew', hebrew: 'פרחים', english: 'Flowers', category: 'others' },
     { khasi: 'Thiah', hebrew: 'לישון', english: 'To sleep', category: 'others' },
