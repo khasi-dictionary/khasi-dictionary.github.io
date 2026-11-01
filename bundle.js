@@ -23994,6 +23994,8 @@
     { khasi: "Shamoit", hebrew: "\u05DB\u05E3/\u05DB\u05E4\u05D9\u05EA/\u05DB\u05E4\u05D5\u05EA/\u05DB\u05E4\u05D9\u05D5\u05EA", english: "spoon / teaspoon / spoons / teaspoons", category: "others", added: "2026-10-30" },
     { khasi: "Bha", hebrew: "\u05DE\u05D0\u05D5\u05D3", english: "very", category: "others" },
     { khasi: "Klat", hebrew: "\u05DB\u05D5\u05E1", english: "cup", category: "others", added: "2026-10-31" },
+    { khasi: "Jingsiang", hebrew: "\u05DE\u05E4\u05EA \u05E9\u05D5\u05DC\u05D7\u05DF", english: "Tablecloth", category: "others", added: "2026-11-01" },
+    { khasi: "Siang", hebrew: "\u05DC\u05E4\u05E8\u05D5\u05E9/\u05DC\u05E4\u05E8\u05D5\u05E1 (\u05DB\u05DE\u05D5 \u05E9\u05E4\u05D5\u05E8\u05E9\u05D9\u05DD \u05E1\u05D3\u05D9\u05DF)", english: "To spread / lay out (like spreading a sheet)", category: "others" },
     { khasi: "Jrong", hebrew: "\u05D2\u05D1\u05D5\u05D4/\u05D0\u05E8\u05D5\u05DA", english: "tall / long", category: "adjectives" },
     { khasi: "Sat", hebrew: "\u05D7\u05E8\u05D9\u05E3", english: "spicy", category: "adjectives", added: "2026-10-27" },
     { khasi: "Bang", hebrew: "\u05D8\u05E2\u05D9\u05DD", english: "tasty", category: "adjectives" },
