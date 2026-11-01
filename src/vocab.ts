@@ -170,6 +170,7 @@ const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Phra|numbers': { he: ['שמונה'], en: ['eight'] },
     'Khyndai|numbers': { he: ['תשע', 'תשעה'], en: ['nine'] },
     'Shiphew|numbers': { he: ['עשר', 'עשרה'], en: ['ten'] },
+    'Jingsiang|others': { he: ['מפה'] },
 };
 
 export function localAnswers(entry: Entry, lang: Lang): string[] {

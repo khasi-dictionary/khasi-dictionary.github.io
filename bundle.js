@@ -24078,7 +24078,8 @@
     "Hyn\xF1iew|numbers": { he: ["\u05E9\u05D1\u05E2", "\u05E9\u05D1\u05E2\u05D4"], en: ["seven"] },
     "Phra|numbers": { he: ["\u05E9\u05DE\u05D5\u05E0\u05D4"], en: ["eight"] },
     "Khyndai|numbers": { he: ["\u05EA\u05E9\u05E2", "\u05EA\u05E9\u05E2\u05D4"], en: ["nine"] },
-    "Shiphew|numbers": { he: ["\u05E2\u05E9\u05E8", "\u05E2\u05E9\u05E8\u05D4"], en: ["ten"] }
+    "Shiphew|numbers": { he: ["\u05E2\u05E9\u05E8", "\u05E2\u05E9\u05E8\u05D4"], en: ["ten"] },
+    "Jingsiang|others": { he: ["\u05DE\u05E4\u05D4"] }
   };
   function localAnswers(entry, lang) {
     const base = lang === "he" ? hebrewAnswers(entry.hebrew) : englishAnswers(entry.english);
