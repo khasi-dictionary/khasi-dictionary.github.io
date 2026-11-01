@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { Caption, ChoiceRow, Closing, FileButton, FileCard, Header, Link, NavLink, Photos, Route, Routes, Row, Rows, TextField, useLocalState } from './kit';
+import { Caption, ChoiceRow, Closing, FileButton, FileCard, Header, Link, NavLink, Route, Routes, Row, Rows, TextField, useLocalState } from './kit';
 import { CATEGORIES, ENTRIES, khasiGroup, khasiMatches, localAnswers, localText, normalizeEnglish, normalizeHebrew, normalizeKhasi, type Entry, type Lang } from './vocab';
-import hero from './photos/hero.png';
 import { OPENSANS_LATIN, OPENSANS_LATIN_RANGE, OPENSANS_HEBREW, OPENSANS_HEBREW_RANGE } from './fonts-data';
 import './fonts.css';
 import './style.css';
@@ -12,7 +11,7 @@ interface Strings {
     kh2local: string; local2kh: string; mix: string; category: string; all: string; roundSize: string;
     start: string; whatMeaning: string; howSay: string; yourAnswer: string; check: string; skip: string;
     next: string; finish: string; correct: string; wrong: string; roundDone: string; newRound: string;
-    question: string; of: string; photoLabel: string; photoAlt: string;
+    question: string; of: string;
     practiceNow: string; dailyPractice: string; settings: string; reviewTitle: string;
     youAnswered: string; mistakesRound: string;
     lifetime: (c: number, total: number) => string;
@@ -36,8 +35,7 @@ const STR: Record<Lang, Strings> = {
         start: 'התחל תרגול', whatMeaning: 'מה המשמעות בעברית?', howSay: 'איך אומרים בקהאסי?',
         yourAnswer: 'התשובה שלך', check: 'בדיקה', skip: 'דילוג', next: 'השאלה הבאה', finish: 'לתוצאה',
         correct: 'נכון!', wrong: 'לא בדיוק.', roundDone: 'הסבב הסתיים!', newRound: 'סבב חדש',
-        question: 'שאלה', of: 'מתוך', photoLabel: 'איור להמחשה',
-        photoAlt: 'איור של מחברת פתוחה עם אותיות עבריות ולטיניות',
+        question: 'שאלה', of: 'מתוך',
         practiceNow: 'לתרגול עכשיו', dailyPractice: 'תרגול יומי', settings: 'הגדרות תרגול',
         reviewTitle: 'כדאי לחזור על', youAnswered: 'ענית:', mistakesRound: 'סבב טעויות',
         lifetime: (c, total) => `סך הכול: ${c} נכונות מתוך ${total} · המעקב נשמר במכשיר הזה בלבד`,
@@ -59,8 +57,7 @@ const STR: Record<Lang, Strings> = {
         start: 'Start practice', whatMeaning: 'What does it mean in English?', howSay: 'How do you say it in Khasi?',
         yourAnswer: 'Your answer', check: 'Check', skip: 'Skip', next: 'Next question', finish: 'See score',
         correct: 'Correct!', wrong: 'Not quite.', roundDone: 'Round complete!', newRound: 'New round',
-        question: 'Question', of: 'of', photoLabel: 'Illustration',
-        photoAlt: 'Illustration of an open notebook with Hebrew and Latin letters',
+        question: 'Question', of: 'of',
         practiceNow: 'Practice now', dailyPractice: 'Daily practice', settings: 'Practice settings',
         reviewTitle: 'Worth reviewing', youAnswered: 'You answered:', mistakesRound: 'Mistakes round',
         lifetime: (c, total) => `All time: ${c} correct out of ${total} · progress is saved on this device only`,
@@ -161,7 +158,6 @@ function Dictionary({ lang, t, stats }: { lang: Lang; t: Strings; stats: Stats }
             </section>;
         })}
         {q.length > 0 && !anyMatch && <Caption>{t.noMatch}</Caption>}
-        <Photos label={t.photoLabel} items={[{ src: hero, alt: t.photoAlt }]} />
     </>;
 }
 
