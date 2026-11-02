@@ -189,12 +189,9 @@ export function localAnswers(entry: Entry, lang: Lang): string[] {
     // One-directional only: ו typed instead of a canonical ן stays wrong. Canonical display unchanged.
     const withTypo = accepted.flatMap(a => {
         if (!a.includes('ו')) return [a];
-        // Both nun forms: a mid-word slip types regular נ, a word-end slip types final ן.
-        const variants = new Set<string>([a.replace(/ו/g, 'נ'), a.replace(/ו/g, 'ן')]);
-        for (let i = 0; i < a.length; i++) if (a[i] === 'ו') {
-            variants.add(a.slice(0, i) + 'נ' + a.slice(i + 1));
-            variants.add(a.slice(0, i) + 'ן' + a.slice(i + 1));
-        }
+        // Exactly the requested slip: ן (final nun) typed where ו belongs.
+        const variants = new Set<string>([a.replace(/ו/g, 'ן')]);
+        for (let i = 0; i < a.length; i++) if (a[i] === 'ו') variants.add(a.slice(0, i) + 'ן' + a.slice(i + 1));
         return [a, ...variants];
     });
     return [...new Set(withTypo)];

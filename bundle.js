@@ -24095,11 +24095,8 @@
     if (lang !== "he") return accepted;
     const withTypo = accepted.flatMap((a) => {
       if (!a.includes("\u05D5")) return [a];
-      const variants = /* @__PURE__ */ new Set([a.replace(/ו/g, "\u05E0"), a.replace(/ו/g, "\u05DF")]);
-      for (let i = 0; i < a.length; i++) if (a[i] === "\u05D5") {
-        variants.add(a.slice(0, i) + "\u05E0" + a.slice(i + 1));
-        variants.add(a.slice(0, i) + "\u05DF" + a.slice(i + 1));
-      }
+      const variants = /* @__PURE__ */ new Set([a.replace(/ו/g, "\u05DF")]);
+      for (let i = 0; i < a.length; i++) if (a[i] === "\u05D5") variants.add(a.slice(0, i) + "\u05DF" + a.slice(i + 1));
       return [a, ...variants];
     });
     return [...new Set(withTypo)];
