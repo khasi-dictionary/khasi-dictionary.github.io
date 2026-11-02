@@ -155,7 +155,7 @@ const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Thiah suk|greetings': { he: ['תישן טוב'] },
     'Doh syiar|jingbam': { he: ['בשר עוף'] },
     'Doh masi|jingbam': { he: ['בשר'] },
-    'Ieit|others': { he: ['אוהב', 'אוהבת'] },
+    'Ieit|others': { he: ['אוהב', 'אוהבת', 'אהב', 'אהבת'] },
     'Phan|jingbam': { he: ['תפוח אדמה', 'תפוחי אדמה', 'תפוד'], en: ['potatoes'] },
     'Jhur|jingbam': { he: ['ירק'], en: ['vegetable'] },
     'Syntiew|others': { he: ['פרח'], en: ['flower'] },
@@ -170,25 +170,19 @@ const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Phra|numbers': { he: ['שמונה'], en: ['eight'] },
     'Khyndai|numbers': { he: ['תשע', 'תשעה'], en: ['nine'] },
     'Shiphew|numbers': { he: ['עשר', 'עשרה'], en: ['ten'] },
-    'Jingsiang|others': { he: ['מפה'] },
+    'Jingsiang|others': { he: ['מפה', 'מפת שלחן'] },
+    'Shuki|furnitures': { he: ['כסא'] },
+    'Meij|furnitures': { he: ['שלחן'] },
+    'Bha|others': { he: ['מאד'] },
+    'Bang bha|greetings': { he: ['טעים מאד'] },
 };
-
-// Ktiv haser (defective spelling) variant: medial י/ו dropped per word, so כסא is accepted for כיסא.
-export function defectiveHebrew(s: string): string {
-    return s.split(' ').map(w => w.length <= 2 ? w : w[0] + w.slice(1, -1).replace(/[יו]/g, '') + w[w.length - 1]).join(' ');
-}
 
 export function localAnswers(entry: Entry, lang: Lang): string[] {
     const base = lang === 'he' ? hebrewAnswers(entry.hebrew) : englishAnswers(entry.english);
     const norm = lang === 'he' ? normalizeHebrew : normalizeEnglish;
     const extra = EXTRA_ANSWERS[`${entry.khasi}|${entry.category}`];
     const extraList = (lang === 'he' ? extra?.he : extra?.en) ?? [];
-    const accepted = [...new Set([...base, ...extraList.map(norm)])];
-    if (lang !== 'he') return accepted;
-    return [...new Set(accepted.flatMap(a => {
-        const d = defectiveHebrew(a);
-        return d === a ? [a] : [a, d];
-    }))];
+    return [...new Set([...base, ...extraList.map(norm)])];
 }
 
 export function localText(entry: Entry, lang: Lang): string {

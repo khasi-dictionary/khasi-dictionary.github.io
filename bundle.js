@@ -24064,7 +24064,7 @@
     "Thiah suk|greetings": { he: ["\u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1"] },
     "Doh syiar|jingbam": { he: ["\u05D1\u05E9\u05E8 \u05E2\u05D5\u05E3"] },
     "Doh masi|jingbam": { he: ["\u05D1\u05E9\u05E8"] },
-    "Ieit|others": { he: ["\u05D0\u05D5\u05D4\u05D1", "\u05D0\u05D5\u05D4\u05D1\u05EA"] },
+    "Ieit|others": { he: ["\u05D0\u05D5\u05D4\u05D1", "\u05D0\u05D5\u05D4\u05D1\u05EA", "\u05D0\u05D4\u05D1", "\u05D0\u05D4\u05D1\u05EA"] },
     "Phan|jingbam": { he: ["\u05EA\u05E4\u05D5\u05D7 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D7\u05D9 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D3"], en: ["potatoes"] },
     "Jhur|jingbam": { he: ["\u05D9\u05E8\u05E7"], en: ["vegetable"] },
     "Syntiew|others": { he: ["\u05E4\u05E8\u05D7"], en: ["flower"] },
@@ -24079,22 +24079,18 @@
     "Phra|numbers": { he: ["\u05E9\u05DE\u05D5\u05E0\u05D4"], en: ["eight"] },
     "Khyndai|numbers": { he: ["\u05EA\u05E9\u05E2", "\u05EA\u05E9\u05E2\u05D4"], en: ["nine"] },
     "Shiphew|numbers": { he: ["\u05E2\u05E9\u05E8", "\u05E2\u05E9\u05E8\u05D4"], en: ["ten"] },
-    "Jingsiang|others": { he: ["\u05DE\u05E4\u05D4"] }
+    "Jingsiang|others": { he: ["\u05DE\u05E4\u05D4", "\u05DE\u05E4\u05EA \u05E9\u05DC\u05D7\u05DF"] },
+    "Shuki|furnitures": { he: ["\u05DB\u05E1\u05D0"] },
+    "Meij|furnitures": { he: ["\u05E9\u05DC\u05D7\u05DF"] },
+    "Bha|others": { he: ["\u05DE\u05D0\u05D3"] },
+    "Bang bha|greetings": { he: ["\u05D8\u05E2\u05D9\u05DD \u05DE\u05D0\u05D3"] }
   };
-  function defectiveHebrew(s) {
-    return s.split(" ").map((w) => w.length <= 2 ? w : w[0] + w.slice(1, -1).replace(/[יו]/g, "") + w[w.length - 1]).join(" ");
-  }
   function localAnswers(entry, lang) {
     const base = lang === "he" ? hebrewAnswers(entry.hebrew) : englishAnswers(entry.english);
     const norm = lang === "he" ? normalizeHebrew : normalizeEnglish;
     const extra = EXTRA_ANSWERS[`${entry.khasi}|${entry.category}`];
     const extraList = (lang === "he" ? extra?.he : extra?.en) ?? [];
-    const accepted = [.../* @__PURE__ */ new Set([...base, ...extraList.map(norm)])];
-    if (lang !== "he") return accepted;
-    return [...new Set(accepted.flatMap((a) => {
-      const d = defectiveHebrew(a);
-      return d === a ? [a] : [a, d];
-    }))];
+    return [.../* @__PURE__ */ new Set([...base, ...extraList.map(norm)])];
   }
   function localText(entry, lang) {
     return lang === "he" ? entry.hebrew : entry.english;
