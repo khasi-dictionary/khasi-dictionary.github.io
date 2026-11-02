@@ -183,7 +183,21 @@ export function localAnswers(entry: Entry, lang: Lang): string[] {
     const norm = lang === 'he' ? normalizeHebrew : normalizeEnglish;
     const extra = EXTRA_ANSWERS[`${entry.khasi}|${entry.category}`];
     const extraList = (lang === 'he' ? extra?.he : extra?.en) ?? [];
-    return [...new Set([...base, ...extraList.map(norm)])];
+    const accepted = [...new Set([...base, ...extraList.map(norm)])];
+    if (lang !== 'he') return accepted;
+    // Typo tolerance (user request 2.11): ן typed instead of ו is a spelling slip, not a wrong answer.
+    // One-directional only: ו typed instead of a canonical ן stays wrong. Canonical display unchanged.
+    const withTypo = accepted.flatMap(a => {
+        if (!a.includes('ו')) return [a];
+        // Both nun forms: a mid-word slip types regular נ, a word-end slip types final ן.
+        const variants = new Set<string>([a.replace(/ו/g, 'נ'), a.replace(/ו/g, 'ן')]);
+        for (let i = 0; i < a.length; i++) if (a[i] === 'ו') {
+            variants.add(a.slice(0, i) + 'נ' + a.slice(i + 1));
+            variants.add(a.slice(0, i) + 'ן' + a.slice(i + 1));
+        }
+        return [a, ...variants];
+    });
+    return [...new Set(withTypo)];
 }
 
 export function localText(entry: Entry, lang: Lang): string {
