@@ -24081,12 +24081,20 @@
     "Shiphew|numbers": { he: ["\u05E2\u05E9\u05E8", "\u05E2\u05E9\u05E8\u05D4"], en: ["ten"] },
     "Jingsiang|others": { he: ["\u05DE\u05E4\u05D4"] }
   };
+  function defectiveHebrew(s) {
+    return s.split(" ").map((w) => w.length <= 2 ? w : w[0] + w.slice(1, -1).replace(/[יו]/g, "") + w[w.length - 1]).join(" ");
+  }
   function localAnswers(entry, lang) {
     const base = lang === "he" ? hebrewAnswers(entry.hebrew) : englishAnswers(entry.english);
     const norm = lang === "he" ? normalizeHebrew : normalizeEnglish;
     const extra = EXTRA_ANSWERS[`${entry.khasi}|${entry.category}`];
     const extraList = (lang === "he" ? extra?.he : extra?.en) ?? [];
-    return [.../* @__PURE__ */ new Set([...base, ...extraList.map(norm)])];
+    const accepted = [.../* @__PURE__ */ new Set([...base, ...extraList.map(norm)])];
+    if (lang !== "he") return accepted;
+    return [...new Set(accepted.flatMap((a) => {
+      const d = defectiveHebrew(a);
+      return d === a ? [a] : [a, d];
+    }))];
   }
   function localText(entry, lang) {
     return lang === "he" ? entry.hebrew : entry.english;
