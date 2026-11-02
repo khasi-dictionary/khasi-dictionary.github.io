@@ -74,6 +74,7 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Nga', hebrew: 'אני', english: 'I', category: 'pronouns' },
     { khasi: 'Ieit', hebrew: 'אהבה', english: 'Love', category: 'others' },
     { khasi: 'Ia phi', hebrew: 'אותך/בשבילך/עבורך/לך', english: 'You / for you / to you', category: 'pronouns' },
+    { khasi: 'Phi', hebrew: 'את/אתה/אתם/אתן', english: 'you (f/m singular and plural)', category: 'pronouns' },
 
     { khasi: 'Wei', hebrew: '1', english: '1', category: 'numbers' },
     { khasi: 'Ar', hebrew: '2', english: '2', category: 'numbers' },

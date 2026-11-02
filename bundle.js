@@ -24009,6 +24009,7 @@
     { khasi: "Nga", hebrew: "\u05D0\u05E0\u05D9", english: "I", category: "pronouns" },
     { khasi: "Ieit", hebrew: "\u05D0\u05D4\u05D1\u05D4", english: "Love", category: "others" },
     { khasi: "Ia phi", hebrew: "\u05D0\u05D5\u05EA\u05DA/\u05D1\u05E9\u05D1\u05D9\u05DC\u05DA/\u05E2\u05D1\u05D5\u05E8\u05DA/\u05DC\u05DA", english: "You / for you / to you", category: "pronouns" },
+    { khasi: "Phi", hebrew: "\u05D0\u05EA/\u05D0\u05EA\u05D4/\u05D0\u05EA\u05DD/\u05D0\u05EA\u05DF", english: "you (f/m singular and plural)", category: "pronouns" },
     { khasi: "Wei", hebrew: "1", english: "1", category: "numbers" },
     { khasi: "Ar", hebrew: "2", english: "2", category: "numbers" },
     { khasi: "Lai", hebrew: "3", english: "3", category: "numbers" },
