@@ -172,6 +172,7 @@ const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Shiphew|numbers': { he: ['עשר', 'עשרה'], en: ['ten'] },
     'Jingsiang|others': { he: ['מפה', 'מפת שלחן'] },
     'Shuki|furnitures': { he: ['כסא'] },
+    'Jingthiah|furnitures': { he: ['מטה'] },
     'Meij|furnitures': { he: ['שלחן'] },
     'Bha|others': { he: ['מאד'] },
     'Bang bha|greetings': { he: ['טעים מאד'] },
