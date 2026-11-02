@@ -77,6 +77,7 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Phi', hebrew: 'את/אתה', english: 'you (singular)', category: 'pronouns' },
     { khasi: 'Ki', hebrew: 'אתם/אתן', english: 'you (plural)', category: 'pronouns' },
     { khasi: 'i', hebrew: 'הוא/היא (צורת נימוס)', english: 'he/him/she/her (polite form)', category: 'pronouns', added: '2026-11-02' },
+    { khasi: 'Ki', hebrew: 'הם/הן/אלה/אלו (לאנשים ולחפצים, זכר ונקבה)', english: 'they/these (people and objects, masculine and feminine)', category: 'pronouns', added: '2026-11-02' },
 
     { khasi: 'Wei', hebrew: '1', english: '1', category: 'numbers' },
     { khasi: 'Ar', hebrew: '2', english: '2', category: 'numbers' },

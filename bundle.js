@@ -24012,6 +24012,7 @@
     { khasi: "Phi", hebrew: "\u05D0\u05EA/\u05D0\u05EA\u05D4", english: "you (singular)", category: "pronouns" },
     { khasi: "Ki", hebrew: "\u05D0\u05EA\u05DD/\u05D0\u05EA\u05DF", english: "you (plural)", category: "pronouns" },
     { khasi: "i", hebrew: "\u05D4\u05D5\u05D0/\u05D4\u05D9\u05D0 (\u05E6\u05D5\u05E8\u05EA \u05E0\u05D9\u05DE\u05D5\u05E1)", english: "he/him/she/her (polite form)", category: "pronouns", added: "2026-11-02" },
+    { khasi: "Ki", hebrew: "\u05D4\u05DD/\u05D4\u05DF/\u05D0\u05DC\u05D4/\u05D0\u05DC\u05D5 (\u05DC\u05D0\u05E0\u05E9\u05D9\u05DD \u05D5\u05DC\u05D7\u05E4\u05E6\u05D9\u05DD, \u05D6\u05DB\u05E8 \u05D5\u05E0\u05E7\u05D1\u05D4)", english: "they/these (people and objects, masculine and feminine)", category: "pronouns", added: "2026-11-02" },
     { khasi: "Wei", hebrew: "1", english: "1", category: "numbers" },
     { khasi: "Ar", hebrew: "2", english: "2", category: "numbers" },
     { khasi: "Lai", hebrew: "3", english: "3", category: "numbers" },
