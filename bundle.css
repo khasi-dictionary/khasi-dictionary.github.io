@@ -292,6 +292,102 @@ body {
   font-size: 12px;
   margin: 4px 0 10px;
 }
+.decor-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.decor {
+  position: fixed;
+  opacity: 0.38;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.khasi-page > *:not(.decor-layer) {
+  position: relative;
+  z-index: 1;
+}
+.decor-flute {
+  left: 1.2vw;
+  top: 9vh;
+  width: 84px;
+  height: auto;
+}
+.decor-pitcher {
+  right: 1.2vw;
+  top: 5vh;
+  width: 104px;
+  height: auto;
+}
+.decor-basket {
+  right: 1.8vw;
+  top: 33vh;
+  width: 92px;
+  height: auto;
+}
+.decor-comb {
+  left: 1.8vw;
+  top: 40vh;
+  width: 108px;
+  height: auto;
+}
+.decor-knup {
+  left: 2.2vw;
+  top: 62vh;
+  width: 96px;
+  height: auto;
+  opacity: 0.32;
+}
+.decor-cloth {
+  right: 2vw;
+  top: 60vh;
+  width: 96px;
+  height: auto;
+}
+.decor-chest {
+  left: 1.8vw;
+  bottom: 3.5vh;
+  width: 104px;
+  height: auto;
+}
+.decor-tray {
+  right: 1.8vw;
+  bottom: 3.5vh;
+  width: 104px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .decor {
+    opacity: 0.3;
+  }
+  .decor-wide {
+    display: none;
+  }
+  .decor-flute {
+    left: 2vw;
+    top: 6vh;
+    width: 44px;
+  }
+  .decor-pitcher {
+    left: 2vw;
+    right: auto;
+    top: 19vh;
+    width: 50px;
+  }
+  .decor-chest {
+    left: 2vw;
+    bottom: 2vh;
+    width: 56px;
+  }
+  .decor-tray {
+    right: 2vw;
+    bottom: 8vh;
+    width: 58px;
+  }
+}
 
 /* src/standalone.css */
 :root {

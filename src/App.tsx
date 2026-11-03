@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Caption, ChoiceRow, Closing, FileButton, FileCard, Header, Link, NavLink, Route, Routes, Row, Rows, TextField, useLocalState } from './kit';
 import { CATEGORIES, ENTRIES, khasiGroup, khasiMatches, localAnswers, localText, normalizeEnglish, normalizeHebrew, normalizeKhasi, type Entry, type Lang } from './vocab';
+import { DECOR } from './decor-data';
 import { OPENSANS_LATIN, OPENSANS_LATIN_RANGE, OPENSANS_HEBREW, OPENSANS_HEBREW_RANGE } from './fonts-data';
 import './fonts.css';
 import './style.css';
@@ -346,6 +347,14 @@ function Practice({ lang, t, stats, setStats, savedStats }: { lang: Lang; t: Str
 
 const OPENSANS_CSS = '@font-face{font-family:\'Open Sans\';font-style:normal;font-weight:300 800;font-display:swap;src:url(data:font/woff2;base64,' + OPENSANS_LATIN + ') format(\'woff2\');unicode-range:' + OPENSANS_LATIN_RANGE + '}@font-face{font-family:\'Open Sans\';font-style:normal;font-weight:300 800;font-display:swap;src:url(data:font/woff2;base64,' + OPENSANS_HEBREW + ') format(\'woff2\');unicode-range:' + OPENSANS_HEBREW_RANGE + '}';
 
+const DECOR_HIDDEN_MOBILE = new Set(['basket', 'comb', 'cloth', 'knup']);
+function DecorLayer() {
+    return <div className="decor-layer" aria-hidden="true">
+        {DECOR.map(d => <img key={d.name} src={d.src} width={d.w} height={d.h} alt=""
+            className={`decor decor-${d.name}${DECOR_HIDDEN_MOBILE.has(d.name) ? ' decor-wide' : ''}`} />)}
+    </div>;
+}
+
 export function App() {
     const [langRaw, setLang, savedLang] = useLocalState('khasi-dict-lang.v1', 'he');
     const [stats, setStats, savedStats] = useLocalState('khasi-practice-stats.v1', EMPTY_STATS);
@@ -353,6 +362,7 @@ export function App() {
     const t = STR[lang];
     return <FileCard>
         <div dir={lang === 'he' ? 'rtl' : 'ltr'} className="khasi-page">
+            <DecorLayer />
             <style>{OPENSANS_CSS}</style>
             <Header title={t.title} intro={t.intro} />
             <ChoiceRow label={t.language} options={[{ value: 'he', label: 'עברית' }, { value: 'en', label: 'English' }]} value={lang} onChange={v => { if (savedLang.ready) setLang(v); }} />
