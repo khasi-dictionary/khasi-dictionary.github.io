@@ -108,19 +108,21 @@ const wordOfTheDay = (): Entry => {
     return (dated[0]?.e) ?? ENTRIES[0];
 };
 
-const dayBefore = (iso: string): string => {
-    const [y, m, d] = iso.split('-').map(Number);
-    return new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10);
-};
+// One-time backfill exception (user request 5.11): Sngi (4.11) was supplied only on 5.11,
+// so on 5.11 both Khlor and Sngi get banner/practice presence. Any other day shows one word.
+const PAIR_DAY = '2026-11-05';
+const PAIR_PREV = '2026-11-04';
 
-// Today's word, plus yesterday's when yesterday's entry was added late (user request 5.11):
-// both get banner/practice presence so a backfilled word is not skipped.
-const dailyWords = (): Entry[] => {
+const todayJerusalem = (): string =>
+    new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Jerusalem', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+
+const dailyWords = (today: string = todayJerusalem()): Entry[] => {
     const wotd = wordOfTheDay();
-    if (!wotd.added) return [wotd];
-    const yest = dayBefore(wotd.added);
-    const prev = ENTRIES.map((e, i) => ({ e, i })).filter(x => x.e.added === yest).sort((a, b) => b.i - a.i);
-    return prev.length ? [wotd, prev[0].e] : [wotd];
+    if (today === PAIR_DAY && wotd.added === PAIR_DAY) {
+        const prev = ENTRIES.map((e, i) => ({ e, i })).filter(x => x.e.added === PAIR_PREV).sort((a, b) => b.i - a.i);
+        if (prev.length) return [wotd, prev[0].e];
+    }
+    return [wotd];
 };
 
 type CardDir = 'kh2local' | 'local2kh';

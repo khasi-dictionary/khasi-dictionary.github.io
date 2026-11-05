@@ -24263,16 +24263,16 @@
     const dated = ENTRIES.map((e, i) => ({ e, i })).filter((x) => x.e.added).sort((a, b) => a.e.added === b.e.added ? b.i - a.i : a.e.added < b.e.added ? 1 : -1);
     return dated[0]?.e ?? ENTRIES[0];
   };
-  var dayBefore = (iso) => {
-    const [y, m, d] = iso.split("-").map(Number);
-    return new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10);
-  };
-  var dailyWords = () => {
+  var PAIR_DAY = "2026-11-05";
+  var PAIR_PREV = "2026-11-04";
+  var todayJerusalem = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Jerusalem", year: "numeric", month: "2-digit", day: "2-digit" }).format(/* @__PURE__ */ new Date());
+  var dailyWords = (today = todayJerusalem()) => {
     const wotd = wordOfTheDay();
-    if (!wotd.added) return [wotd];
-    const yest = dayBefore(wotd.added);
-    const prev = ENTRIES.map((e, i) => ({ e, i })).filter((x) => x.e.added === yest).sort((a, b) => b.i - a.i);
-    return prev.length ? [wotd, prev[0].e] : [wotd];
+    if (today === PAIR_DAY && wotd.added === PAIR_DAY) {
+      const prev = ENTRIES.map((e, i) => ({ e, i })).filter((x) => x.e.added === PAIR_PREV).sort((a, b) => b.i - a.i);
+      if (prev.length) return [wotd, prev[0].e];
+    }
+    return [wotd];
   };
   var cardKey = (e, dir) => dir + "|" + e.khasi + "|" + e.hebrew;
   var EMPTY_STATS = { correct: 0, total: 0, cards: {} };
