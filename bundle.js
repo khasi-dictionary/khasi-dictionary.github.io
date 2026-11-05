@@ -24010,6 +24010,7 @@
     { khasi: "Ieit", hebrew: "\u05D0\u05D4\u05D1\u05D4", english: "Love", category: "others" },
     { khasi: "Bnai", hebrew: "\u05D9\u05E8\u05D7/\u05D7\u05D5\u05D3\u05E9 (\u05D2\u05DD \u05D9\u05E8\u05D7 \u05E9\u05D1\u05E9\u05DE\u05D9\u05D9\u05DD \u05D5\u05D2\u05DD \u05D7\u05D5\u05D3\u05E9 \u05D1\u05E9\u05E0\u05D4)", english: "moon/month (both the moon in the sky and a calendar month)", category: "others", added: "2026-11-03" },
     { khasi: "Sngi", hebrew: "\u05E9\u05DE\u05E9", english: "sun", category: "others", added: "2026-11-04" },
+    { khasi: "Khlor", hebrew: "\u05DB\u05D5\u05DB\u05D1/\u05DB\u05D5\u05DB\u05D1\u05D9\u05DD", english: "star/stars", category: "others", added: "2026-11-05" },
     { khasi: "Ia phi", hebrew: "\u05D0\u05D5\u05EA\u05DA/\u05D1\u05E9\u05D1\u05D9\u05DC\u05DA/\u05E2\u05D1\u05D5\u05E8\u05DA/\u05DC\u05DA", english: "You / for you / to you", category: "pronouns" },
     { khasi: "Phi", hebrew: "\u05D0\u05EA/\u05D0\u05EA\u05D4", english: "you (singular)", category: "pronouns" },
     { khasi: "i", hebrew: "\u05D4\u05D5\u05D0/\u05D4\u05D9\u05D0 (\u05E6\u05D5\u05E8\u05EA \u05E0\u05D9\u05DE\u05D5\u05E1)", english: "he/him/she/her (polite form)", category: "pronouns", added: "2026-11-02" },
@@ -24182,6 +24183,8 @@
       scoreLine: (c, total) => `\u05E2\u05E0\u05D9\u05EA \u05E0\u05DB\u05D5\u05DF \u05E2\u05DC ${c} \u05DE\u05EA\u05D5\u05DA ${total}`,
       setupSummary: (size, cat, dir) => `${size} \u05DE\u05D9\u05DC\u05D9\u05DD \xB7 ${cat} \xB7 ${dir}`,
       includesWotd: (w, m) => `\u05DB\u05D5\u05DC\u05DC \u05D0\u05EA \u05DE\u05D9\u05DC\u05EA \u05D4\u05D9\u05D5\u05DD: ${w} \xB7 ${m}`,
+      includesWotd2: (w1, m1, w2, m2) => `\u05DB\u05D5\u05DC\u05DC \u05D0\u05EA \u05DE\u05D9\u05DC\u05D5\u05EA \u05D4\u05D9\u05D5\u05DD \u05D5\u05D0\u05EA\u05DE\u05D5\u05DC: ${w1} \xB7 ${m1} + ${w2} \xB7 ${m2}`,
+      wotdPair: "\u05DE\u05D9\u05DC\u05D5\u05EA \u05D4\u05D9\u05D5\u05DD \u05D5\u05D0\u05EA\u05DE\u05D5\u05DC",
       progressLine: (p, k, total) => `\u05E0\u05EA\u05E8\u05D2\u05DC\u05D5 ${p} \u05DE\u05EA\u05D5\u05DA ${total} \u05DE\u05D9\u05DC\u05D9\u05DD \xB7 ${k} \u05D1\u05E9\u05DC\u05D9\u05D8\u05D4`,
       stamp: "\xA9 \u05DE\u05DC\u05D0\u05DB\u05D9 \u05D2\u05D5\u05DC\u05D3\u05E9\u05DE\u05D9\u05D3\u05D8 \u05D5\u05E8\u05D9\u05D9\u05E6'\u05DC \u05D2'\u05D5\u05D9\u05E1 \u05DC\u05D9\u05D9\u05D8\u05E4\u05DC\u05E0\u05D2 \xB7 2026"
     },
@@ -24228,6 +24231,8 @@
       scoreLine: (c, total) => `You answered ${c} out of ${total} correctly`,
       setupSummary: (size, cat, dir) => `${size} words \xB7 ${cat} \xB7 ${dir}`,
       includesWotd: (w, m) => `Includes today's word: ${w} \xB7 ${m}`,
+      includesWotd2: (w1, m1, w2, m2) => `Includes today's and yesterday's words: ${w1} \xB7 ${m1} + ${w2} \xB7 ${m2}`,
+      wotdPair: "Today's and yesterday's words",
       progressLine: (p, k, total) => `Practiced ${p} of ${total} words \xB7 ${k} mastered`,
       stamp: "\xA9 Malachi Goldschmidt & Rachel Joyce Laitflang \xB7 2026"
     }
@@ -24258,6 +24263,17 @@
     const dated = ENTRIES.map((e, i) => ({ e, i })).filter((x) => x.e.added).sort((a, b) => a.e.added === b.e.added ? b.i - a.i : a.e.added < b.e.added ? 1 : -1);
     return dated[0]?.e ?? ENTRIES[0];
   };
+  var dayBefore = (iso) => {
+    const [y, m, d] = iso.split("-").map(Number);
+    return new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10);
+  };
+  var dailyWords = () => {
+    const wotd = wordOfTheDay();
+    if (!wotd.added) return [wotd];
+    const yest = dayBefore(wotd.added);
+    const prev = ENTRIES.map((e, i) => ({ e, i })).filter((x) => x.e.added === yest).sort((a, b) => b.i - a.i);
+    return prev.length ? [wotd, prev[0].e] : [wotd];
+  };
   var cardKey = (e, dir) => dir + "|" + e.khasi + "|" + e.hebrew;
   var EMPTY_STATS = { correct: 0, total: 0, cards: {} };
   function Dictionary({ lang, t, stats }) {
@@ -24269,7 +24285,7 @@
     const qe = normalizeEnglish(q);
     const matches = (e) => !q || qh.length > 0 && normalizeHebrew(e.hebrew).includes(qh) || qe.length > 0 && normalizeEnglish(e.english).includes(qe) || qk.length > 0 && normalizeKhasi(e.khasi).includes(qk);
     const anyMatch = ENTRIES.some(matches);
-    const wotd = wordOfTheDay();
+    const wotds = dailyWords();
     const perEntry = /* @__PURE__ */ new Map();
     for (const [k, v] of Object.entries(stats.cards)) {
       const id = k.split("|").slice(1).join("|");
@@ -24282,12 +24298,12 @@
       /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "wotd", children: [
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "wotd-spark", children: "\u2728" }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "wotd-body", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "wotd-label", children: t.wotd }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "wotd-word", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "ltr", children: wotd.khasi }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "wotd-label", children: wotds.length > 1 ? t.wotdPair : t.wotd }),
+          wotds.map((w) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "wotd-word", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "ltr", children: w.khasi }),
             " \xB7 ",
-            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "auto", children: localText(wotd, lang) })
-          ] })
+            /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { dir: "auto", children: localText(w, lang) })
+          ] }, w.khasi + "|" + w.hebrew))
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Link, { className: "file-button is-compact", to: "/", children: t.practiceNow })
       ] }),
@@ -24330,11 +24346,12 @@
         const bag = pool.map((e) => ({ e, w: 1 / (1 + (stats.cards[cardKey(e, "kh2local")]?.c ?? 0)) }));
         deck = [];
         const n = Math.min(typeof prefs.size === "number" ? prefs.size : 10, bag.length);
-        const wotd = wordOfTheDay();
-        const wotdIdx = bag.findIndex((x) => x.e === wotd);
-        if (wotdIdx >= 0 && n > 0) {
-          deck.push({ entry: bag[wotdIdx].e, dir: resolveDir() });
-          bag.splice(wotdIdx, 1);
+        for (const w of dailyWords()) {
+          const wIdx = bag.findIndex((x) => x.e === w);
+          if (wIdx >= 0 && deck.length < n) {
+            deck.push({ entry: bag[wIdx].e, dir: resolveDir() });
+            bag.splice(wIdx, 1);
+          }
         }
         while (deck.length < n && bag.length > 0) {
           const totalW = bag.reduce((s, x) => s + x.w, 0);
@@ -24421,7 +24438,10 @@
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "start-summary", children: t.setupSummary(typeof prefs.size === "number" ? prefs.size : 10, catSummary, dirLabel) }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "start-wotd", children: [
             "\u2728 ",
-            t.includesWotd(wordOfTheDay().khasi, localText(wordOfTheDay(), lang))
+            (() => {
+              const ws = dailyWords();
+              return ws.length > 1 ? t.includesWotd2(ws[0].khasi, localText(ws[0], lang), ws[1].khasi, localText(ws[1], lang)) : t.includesWotd(ws[0].khasi, localText(ws[0], lang));
+            })()
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(FileButton, { variant: "primary", onClick: () => buildDeck(), children: t.start })
         ] }),

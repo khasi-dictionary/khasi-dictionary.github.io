@@ -20,6 +20,8 @@ interface Strings {
     scoreLine: (c: number, total: number) => string;
     setupSummary: (size: number, cat: string, dir: string) => string;
     includesWotd: (w: string, m: string) => string;
+    includesWotd2: (w1: string, m1: string, w2: string, m2: string) => string;
+    wotdPair: string;
     progressLine: (practiced: number, known: number, total: number) => string;
     stamp: string;
 }
@@ -44,6 +46,8 @@ const STR: Record<Lang, Strings> = {
         scoreLine: (c, total) => `ענית נכון על ${c} מתוך ${total}`,
         setupSummary: (size, cat, dir) => `${size} מילים · ${cat} · ${dir}`,
         includesWotd: (w, m) => `כולל את מילת היום: ${w} · ${m}`,
+        includesWotd2: (w1, m1, w2, m2) => `כולל את מילות היום ואתמול: ${w1} · ${m1} + ${w2} · ${m2}`,
+        wotdPair: 'מילות היום ואתמול',
         progressLine: (p, k, total) => `נתרגלו ${p} מתוך ${total} מילים · ${k} בשליטה`,
         stamp: "© מלאכי גולדשמידט ורייצ'ל ג'ויס לייטפלנג · 2026",
     },
@@ -66,6 +70,8 @@ const STR: Record<Lang, Strings> = {
         scoreLine: (c, total) => `You answered ${c} out of ${total} correctly`,
         setupSummary: (size, cat, dir) => `${size} words · ${cat} · ${dir}`,
         includesWotd: (w, m) => `Includes today's word: ${w} · ${m}`,
+        includesWotd2: (w1, m1, w2, m2) => `Includes today's and yesterday's words: ${w1} · ${m1} + ${w2} · ${m2}`,
+        wotdPair: "Today's and yesterday's words",
         progressLine: (p, k, total) => `Practiced ${p} of ${total} words · ${k} mastered`,
         stamp: '© Malachi Goldschmidt & Rachel Joyce Laitflang · 2026',
     },
@@ -102,6 +108,21 @@ const wordOfTheDay = (): Entry => {
     return (dated[0]?.e) ?? ENTRIES[0];
 };
 
+const dayBefore = (iso: string): string => {
+    const [y, m, d] = iso.split('-').map(Number);
+    return new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10);
+};
+
+// Today's word, plus yesterday's when yesterday's entry was added late (user request 5.11):
+// both get banner/practice presence so a backfilled word is not skipped.
+const dailyWords = (): Entry[] => {
+    const wotd = wordOfTheDay();
+    if (!wotd.added) return [wotd];
+    const yest = dayBefore(wotd.added);
+    const prev = ENTRIES.map((e, i) => ({ e, i })).filter(x => x.e.added === yest).sort((a, b) => b.i - a.i);
+    return prev.length ? [wotd, prev[0].e] : [wotd];
+};
+
 type CardDir = 'kh2local' | 'local2kh';
 const cardKey = (e: Entry, dir: CardDir) => dir + '|' + e.khasi + '|' + e.hebrew;
 
@@ -120,7 +141,7 @@ function Dictionary({ lang, t, stats }: { lang: Lang; t: Strings; stats: Stats }
         (qe.length > 0 && normalizeEnglish(e.english).includes(qe)) ||
         (qk.length > 0 && normalizeKhasi(e.khasi).includes(qk));
     const anyMatch = ENTRIES.some(matches);
-    const wotd = wordOfTheDay();
+    const wotds = dailyWords();
     const perEntry = new Map<string, { c: number; w: number }>();
     for (const [k, v] of Object.entries(stats.cards)) {
         const id = k.split('|').slice(1).join('|');
@@ -133,8 +154,8 @@ function Dictionary({ lang, t, stats }: { lang: Lang; t: Strings; stats: Stats }
         <div className="wotd">
             <span className="wotd-spark">✨</span>
             <div className="wotd-body">
-                <div className="wotd-label">{t.wotd}</div>
-                <div className="wotd-word"><span dir="ltr">{wotd.khasi}</span> · <span dir="auto">{localText(wotd, lang)}</span></div>
+                <div className="wotd-label">{wotds.length > 1 ? t.wotdPair : t.wotd}</div>
+                {wotds.map(w => <div key={w.khasi + '|' + w.hebrew} className="wotd-word"><span dir="ltr">{w.khasi}</span> · <span dir="auto">{localText(w, lang)}</span></div>)}
             </div>
             <Link className="file-button is-compact" to="/">{t.practiceNow}</Link>
         </div>
@@ -187,11 +208,12 @@ function Practice({ lang, t, stats, setStats, savedStats }: { lang: Lang; t: Str
             const bag = pool.map(e => ({ e, w: 1 / (1 + (stats.cards[cardKey(e, 'kh2local')]?.c ?? 0)) }));
             deck = [];
             const n = Math.min(typeof prefs.size === 'number' ? prefs.size : 10, bag.length);
-            const wotd = wordOfTheDay();
-            const wotdIdx = bag.findIndex(x => x.e === wotd);
-            if (wotdIdx >= 0 && n > 0) {
-                deck.push({ entry: bag[wotdIdx].e, dir: resolveDir() });
-                bag.splice(wotdIdx, 1);
+            for (const w of dailyWords()) {
+                const wIdx = bag.findIndex(x => x.e === w);
+                if (wIdx >= 0 && deck.length < n) {
+                    deck.push({ entry: bag[wIdx].e, dir: resolveDir() });
+                    bag.splice(wIdx, 1);
+                }
             }
             while (deck.length < n && bag.length > 0) {
                 const totalW = bag.reduce((s, x) => s + x.w, 0);
@@ -278,7 +300,7 @@ function Practice({ lang, t, stats, setStats, savedStats }: { lang: Lang; t: Str
                 <div className="start-emoji">⚡</div>
                 <div className="start-title">{t.dailyPractice}</div>
                 <div className="start-summary">{t.setupSummary(typeof prefs.size === 'number' ? prefs.size : 10, catSummary, dirLabel)}</div>
-                <div className="start-wotd">✨ {t.includesWotd(wordOfTheDay().khasi, localText(wordOfTheDay(), lang))}</div>
+                <div className="start-wotd">✨ {(() => { const ws = dailyWords(); return ws.length > 1 ? t.includesWotd2(ws[0].khasi, localText(ws[0], lang), ws[1].khasi, localText(ws[1], lang)) : t.includesWotd(ws[0].khasi, localText(ws[0], lang)); })()}</div>
                 <FileButton variant="primary" onClick={() => buildDeck()}>{t.start}</FileButton>
             </div>
             <button type="button" className="settings-toggle" onClick={() => setShowSettings(s => !s)} aria-expanded={showSettings}>
