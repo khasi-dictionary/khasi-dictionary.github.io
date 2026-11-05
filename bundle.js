@@ -24009,6 +24009,7 @@
     { khasi: "Nga", hebrew: "\u05D0\u05E0\u05D9", english: "I", category: "pronouns" },
     { khasi: "Ieit", hebrew: "\u05D0\u05D4\u05D1\u05D4", english: "Love", category: "others" },
     { khasi: "Bnai", hebrew: "\u05D9\u05E8\u05D7/\u05D7\u05D5\u05D3\u05E9 (\u05D2\u05DD \u05D9\u05E8\u05D7 \u05E9\u05D1\u05E9\u05DE\u05D9\u05D9\u05DD \u05D5\u05D2\u05DD \u05D7\u05D5\u05D3\u05E9 \u05D1\u05E9\u05E0\u05D4)", english: "moon/month (both the moon in the sky and a calendar month)", category: "others", added: "2026-11-03" },
+    { khasi: "Sngi", hebrew: "\u05E9\u05DE\u05E9", english: "sun", category: "others", added: "2026-11-04" },
     { khasi: "Ia phi", hebrew: "\u05D0\u05D5\u05EA\u05DA/\u05D1\u05E9\u05D1\u05D9\u05DC\u05DA/\u05E2\u05D1\u05D5\u05E8\u05DA/\u05DC\u05DA", english: "You / for you / to you", category: "pronouns" },
     { khasi: "Phi", hebrew: "\u05D0\u05EA/\u05D0\u05EA\u05D4", english: "you (singular)", category: "pronouns" },
     { khasi: "i", hebrew: "\u05D4\u05D5\u05D0/\u05D4\u05D9\u05D0 (\u05E6\u05D5\u05E8\u05EA \u05E0\u05D9\u05DE\u05D5\u05E1)", english: "he/him/she/her (polite form)", category: "pronouns", added: "2026-11-02" },
