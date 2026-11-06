@@ -76,6 +76,7 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Bnai', hebrew: 'ירח/חודש (גם ירח שבשמיים וגם חודש בשנה)', english: 'moon/month (both the moon in the sky and a calendar month)', category: 'others', added: '2026-11-03' },
     { khasi: 'Sngi', hebrew: 'שמש', english: 'sun', category: 'others', added: '2026-11-04' },
     { khasi: 'Khlor', hebrew: 'כוכב/כוכבים', english: 'star/stars', category: 'others', added: '2026-11-05' },
+    { khasi: 'Bneng', hebrew: 'גן עדן (אולי גם שמיים - לא בטוחים)', english: 'Heaven', category: 'others', added: '2026-11-06' },
     { khasi: 'Ia phi', hebrew: 'אותך/בשבילך/עבורך/לך', english: 'You / for you / to you', category: 'pronouns' },
     { khasi: 'Phi', hebrew: 'את/אתה', english: 'you (singular)', category: 'pronouns' },
     { khasi: 'i', hebrew: 'הוא/היא (צורת נימוס)', english: 'he/him/she/her (polite form)', category: 'pronouns', added: '2026-11-02' },
