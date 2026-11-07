@@ -163,6 +163,10 @@ export function englishAnswers(english: string): string[] {
 // Keyed by khasi + category so homograph entries (Saw = red vs Saw = 4) stay separate.
 const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
+    'Khublei|greetings': { he: ['תודות'] },
+    'Map|greetings': { he: ['סליחות'] },
+    'Ruti|jingbam': { he: ['לחמים'] },
+    'Sngi|nature': { he: ['שמשות'] },
     'Pylleng|jingbam': { he: ['ביצים', 'חביתות'] },
     'Doh kha|jingbam': { he: ['דגים'] },
     'Kajor|jingbam': { he: ['גזרים'] },
@@ -185,9 +189,9 @@ const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Bnai|nature': { he: ['ירחים', 'חודשים'] },
     'Doh|others': { he: ['נשיקות'] },
     'Thiah suk|greetings': { he: ['תישן טוב'] },
-    'Doh syiar|jingbam': { he: ['בשר עוף'] },
+    'Doh syiar|jingbam': { he: ['בשר עוף', 'עופות'] },
     'Doh masi|jingbam': { he: ['בשר'] },
-    'Ieit|others': { he: ['אוהב', 'אוהבת', 'אהב', 'אהבת'] },
+    'Ieit|others': { he: ['אוהב', 'אוהבת', 'אהב', 'אהבת', 'אהבות'] },
     'Phan|jingbam': { he: ['תפוח אדמה', 'תפוחי אדמה', 'תפוד'], en: ['potatoes'] },
     'Jhur|jingbam': { he: ['ירק'], en: ['vegetable'] },
     'Syntiew|nature': { he: ['פרח'], en: ['flower'] },

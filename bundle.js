@@ -24072,6 +24072,10 @@
   }
   var EXTRA_ANSWERS = {
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
+    "Khublei|greetings": { he: ["\u05EA\u05D5\u05D3\u05D5\u05EA"] },
+    "Map|greetings": { he: ["\u05E1\u05DC\u05D9\u05D7\u05D5\u05EA"] },
+    "Ruti|jingbam": { he: ["\u05DC\u05D7\u05DE\u05D9\u05DD"] },
+    "Sngi|nature": { he: ["\u05E9\u05DE\u05E9\u05D5\u05EA"] },
     "Pylleng|jingbam": { he: ["\u05D1\u05D9\u05E6\u05D9\u05DD", "\u05D7\u05D1\u05D9\u05EA\u05D5\u05EA"] },
     "Doh kha|jingbam": { he: ["\u05D3\u05D2\u05D9\u05DD"] },
     "Kajor|jingbam": { he: ["\u05D2\u05D6\u05E8\u05D9\u05DD"] },
@@ -24094,9 +24098,9 @@
     "Bnai|nature": { he: ["\u05D9\u05E8\u05D7\u05D9\u05DD", "\u05D7\u05D5\u05D3\u05E9\u05D9\u05DD"] },
     "Doh|others": { he: ["\u05E0\u05E9\u05D9\u05E7\u05D5\u05EA"] },
     "Thiah suk|greetings": { he: ["\u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1"] },
-    "Doh syiar|jingbam": { he: ["\u05D1\u05E9\u05E8 \u05E2\u05D5\u05E3"] },
+    "Doh syiar|jingbam": { he: ["\u05D1\u05E9\u05E8 \u05E2\u05D5\u05E3", "\u05E2\u05D5\u05E4\u05D5\u05EA"] },
     "Doh masi|jingbam": { he: ["\u05D1\u05E9\u05E8"] },
-    "Ieit|others": { he: ["\u05D0\u05D5\u05D4\u05D1", "\u05D0\u05D5\u05D4\u05D1\u05EA", "\u05D0\u05D4\u05D1", "\u05D0\u05D4\u05D1\u05EA"] },
+    "Ieit|others": { he: ["\u05D0\u05D5\u05D4\u05D1", "\u05D0\u05D5\u05D4\u05D1\u05EA", "\u05D0\u05D4\u05D1", "\u05D0\u05D4\u05D1\u05EA", "\u05D0\u05D4\u05D1\u05D5\u05EA"] },
     "Phan|jingbam": { he: ["\u05EA\u05E4\u05D5\u05D7 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D7\u05D9 \u05D0\u05D3\u05DE\u05D4", "\u05EA\u05E4\u05D5\u05D3"], en: ["potatoes"] },
     "Jhur|jingbam": { he: ["\u05D9\u05E8\u05E7"], en: ["vegetable"] },
     "Syntiew|nature": { he: ["\u05E4\u05E8\u05D7"], en: ["flower"] },
