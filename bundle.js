@@ -24071,6 +24071,28 @@
     return [...out];
   }
   var EXTRA_ANSWERS = {
+    // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
+    "Pylleng|jingbam": { he: ["\u05D1\u05D9\u05E6\u05D9\u05DD", "\u05D7\u05D1\u05D9\u05EA\u05D5\u05EA"] },
+    "Doh kha|jingbam": { he: ["\u05D3\u05D2\u05D9\u05DD"] },
+    "Kajor|jingbam": { he: ["\u05D2\u05D6\u05E8\u05D9\u05DD"] },
+    "Soh|jingbam": { he: ["\u05E4\u05D9\u05E8\u05D5\u05EA"] },
+    "Sohsaw|jingbam": { he: ["\u05E2\u05D2\u05D1\u05E0\u05D9\u05D5\u05EA"] },
+    "Kait|jingbam": { he: ["\u05D1\u05E0\u05E0\u05D5\u05EA"] },
+    "Sohkhia|jingbam": { he: ["\u05DE\u05DC\u05E4\u05E4\u05D5\u05E0\u05D9\u05DD"] },
+    "Piat|jingbam": { he: ["\u05D1\u05E6\u05DC\u05D9\u05DD"] },
+    "Mrat|mrat": { he: ["\u05D7\u05D9\u05D4"] },
+    "Miaow|mrat": { he: ["\u05D7\u05EA\u05D5\u05DC\u05D9\u05DD"] },
+    "Ksiew|mrat": { he: ["\u05DB\u05DC\u05D1\u05D9\u05DD"] },
+    "Syiar|mrat": { he: ["\u05EA\u05E8\u05E0\u05D2\u05D5\u05DC\u05D9\u05DD"] },
+    "Masi|mrat": { he: ["\u05E4\u05E8\u05D5\u05EA"] },
+    "Doh Kha|mrat": { he: ["\u05D3\u05D2\u05D9\u05DD"] },
+    "Sim|mrat": { he: ["\u05E6\u05D9\u05E4\u05D5\u05E8\u05D9\u05DD"] },
+    "Jingkhang|homekitchen": { he: ["\u05D3\u05DC\u05EA\u05D5\u05EA"] },
+    "Proh|homekitchen": { he: ["\u05DE\u05D6\u05DC\u05D2\u05D5\u05EA"] },
+    "Klat|homekitchen": { he: ["\u05DB\u05D5\u05E1\u05D5\u05EA"] },
+    "Deing|nature": { he: ["\u05E2\u05E6\u05D9\u05DD"] },
+    "Bnai|nature": { he: ["\u05D9\u05E8\u05D7\u05D9\u05DD", "\u05D7\u05D5\u05D3\u05E9\u05D9\u05DD"] },
+    "Doh|others": { he: ["\u05E0\u05E9\u05D9\u05E7\u05D5\u05EA"] },
     "Thiah suk|greetings": { he: ["\u05EA\u05D9\u05E9\u05DF \u05D8\u05D5\u05D1"] },
     "Doh syiar|jingbam": { he: ["\u05D1\u05E9\u05E8 \u05E2\u05D5\u05E3"] },
     "Doh masi|jingbam": { he: ["\u05D1\u05E9\u05E8"] },
@@ -24089,10 +24111,10 @@
     "Phra|numbers": { he: ["\u05E9\u05DE\u05D5\u05E0\u05D4"], en: ["eight"] },
     "Khyndai|numbers": { he: ["\u05EA\u05E9\u05E2", "\u05EA\u05E9\u05E2\u05D4"], en: ["nine"] },
     "Shiphew|numbers": { he: ["\u05E2\u05E9\u05E8", "\u05E2\u05E9\u05E8\u05D4"], en: ["ten"] },
-    "Jingsiang|homekitchen": { he: ["\u05DE\u05E4\u05D4", "\u05DE\u05E4\u05EA \u05E9\u05DC\u05D7\u05DF"] },
-    "Shuki|furnitures": { he: ["\u05DB\u05E1\u05D0"] },
-    "Jingthiah|furnitures": { he: ["\u05DE\u05D8\u05D4"] },
-    "Meij|furnitures": { he: ["\u05E9\u05DC\u05D7\u05DF"] },
+    "Jingsiang|homekitchen": { he: ["\u05DE\u05E4\u05D4", "\u05DE\u05E4\u05EA \u05E9\u05DC\u05D7\u05DF", "\u05DE\u05E4\u05D5\u05EA \u05E9\u05D5\u05DC\u05D7\u05DF"] },
+    "Shuki|furnitures": { he: ["\u05DB\u05E1\u05D0", "\u05DB\u05D9\u05E1\u05D0\u05D5\u05EA"] },
+    "Jingthiah|furnitures": { he: ["\u05DE\u05D8\u05D4", "\u05DE\u05D9\u05D8\u05D5\u05EA"] },
+    "Meij|furnitures": { he: ["\u05E9\u05DC\u05D7\u05DF", "\u05E9\u05D5\u05DC\u05D7\u05E0\u05D5\u05EA"] },
     "Bha|others": { he: ["\u05DE\u05D0\u05D3"] },
     "Bang bha|greetings": { he: ["\u05D8\u05E2\u05D9\u05DD \u05DE\u05D0\u05D3"] }
   };
