@@ -85,6 +85,8 @@ const CAT_STYLE: Record<string, { color: string; emoji: string; enShort: string 
     others: { color: '#d3608a', emoji: '🌈', enShort: 'Other' },
     numbers: { color: '#4f8fc9', emoji: '🔢', enShort: 'Numbers' },
     pronouns: { color: '#3aa7a3', emoji: '🧍', enShort: 'Pronouns' },
+    nature: { color: '#7cb342', emoji: '🌿', enShort: 'Nature' },
+    homekitchen: { color: '#a35fd3', emoji: '🍽️', enShort: 'Home & Kitchen' },
     adjectives: { color: '#a0785a', emoji: '📏', enShort: 'Adjectives' },
 };
 
