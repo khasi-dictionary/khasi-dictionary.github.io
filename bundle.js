@@ -24028,7 +24028,18 @@
     { khasi: "Hyn\xF1iew", hebrew: "7", english: "7", category: "numbers" },
     { khasi: "Phra", hebrew: "8", english: "8", category: "numbers" },
     { khasi: "Khyndai", hebrew: "9", english: "9", category: "numbers" },
-    { khasi: "Shiphew", hebrew: "10", english: "10", category: "numbers" }
+    { khasi: "Shiphew", hebrew: "10", english: "10", category: "numbers" },
+    // Word of the day 8.11: Khat- teens family (user: "Khat- לא עומד בפני עצמו", 9 new words 11-19).
+    // 11-13 spellings as supplied; 14-19 composed Khat- + existing user-supplied 4-9 spellings (Saw/San/Hynriew/Hynñiew/Phra/Khyndai).
+    { khasi: "Khatwei", hebrew: "11", english: "11", category: "numbers", added: "2026-11-08" },
+    { khasi: "Khatar", hebrew: "12", english: "12", category: "numbers", added: "2026-11-08" },
+    { khasi: "Khatlai", hebrew: "13", english: "13", category: "numbers", added: "2026-11-08" },
+    { khasi: "Khatsaw", hebrew: "14", english: "14", category: "numbers", added: "2026-11-08" },
+    { khasi: "Khatsan", hebrew: "15", english: "15", category: "numbers", added: "2026-11-08" },
+    { khasi: "Khathynriew", hebrew: "16", english: "16", category: "numbers", added: "2026-11-08" },
+    { khasi: "Khathyn\xF1iew", hebrew: "17", english: "17", category: "numbers", added: "2026-11-08" },
+    { khasi: "Khatphra", hebrew: "18", english: "18", category: "numbers", added: "2026-11-08" },
+    { khasi: "Khatkhyndai", hebrew: "19", english: "19", category: "numbers", added: "2026-11-08" }
   ];
   var stripMarks = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
   function normalizeKhasi(s) {
