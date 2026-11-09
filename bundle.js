@@ -24010,6 +24010,9 @@
     { khasi: "Khia", hebrew: "\u05DB\u05D1\u05D3", english: "Heavy", category: "others" },
     { khasi: "Nga", hebrew: "\u05D0\u05E0\u05D9", english: "I", category: "pronouns" },
     { khasi: "Ieit", hebrew: "\u05D0\u05D4\u05D1\u05D4", english: "Love", category: "others" },
+    // Words of the day 9.11 (user): Hooid - כן, Em - לא.
+    { khasi: "Hooid", hebrew: "\u05DB\u05DF", english: "yes", category: "others", added: "2026-11-09" },
+    { khasi: "Em", hebrew: "\u05DC\u05D0", english: "no", category: "others", added: "2026-11-09" },
     { khasi: "Bnai", hebrew: "\u05D9\u05E8\u05D7/\u05D7\u05D5\u05D3\u05E9 (\u05D2\u05DD \u05D9\u05E8\u05D7 \u05E9\u05D1\u05E9\u05DE\u05D9\u05D9\u05DD \u05D5\u05D2\u05DD \u05D7\u05D5\u05D3\u05E9 \u05D1\u05E9\u05E0\u05D4)", english: "moon/month (both the moon in the sky and a calendar month)", category: "nature", added: "2026-11-03" },
     { khasi: "Sngi", hebrew: "\u05E9\u05DE\u05E9/\u05D9\u05D5\u05DD", english: "sun/day", category: "nature", added: "2026-11-04" },
     { khasi: "Khlor", hebrew: "\u05DB\u05D5\u05DB\u05D1/\u05DB\u05D5\u05DB\u05D1\u05D9\u05DD", english: "star/stars", category: "nature", added: "2026-11-05" },

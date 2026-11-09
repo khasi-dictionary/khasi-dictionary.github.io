@@ -75,6 +75,9 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Khia', hebrew: 'כבד', english: 'Heavy', category: 'others' },
     { khasi: 'Nga', hebrew: 'אני', english: 'I', category: 'pronouns' },
     { khasi: 'Ieit', hebrew: 'אהבה', english: 'Love', category: 'others' },
+    // Words of the day 9.11 (user): Hooid - כן, Em - לא.
+    { khasi: 'Hooid', hebrew: 'כן', english: 'yes', category: 'others', added: '2026-11-09' },
+    { khasi: 'Em', hebrew: 'לא', english: 'no', category: 'others', added: '2026-11-09' },
     { khasi: 'Bnai', hebrew: 'ירח/חודש (גם ירח שבשמיים וגם חודש בשנה)', english: 'moon/month (both the moon in the sky and a calendar month)', category: 'nature', added: '2026-11-03' },
     { khasi: 'Sngi', hebrew: 'שמש/יום', english: 'sun/day', category: 'nature', added: '2026-11-04' },
     { khasi: 'Khlor', hebrew: 'כוכב/כוכבים', english: 'star/stars', category: 'nature', added: '2026-11-05' },
