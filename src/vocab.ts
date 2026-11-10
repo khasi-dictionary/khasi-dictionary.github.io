@@ -21,6 +21,8 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Khublei', hebrew: 'תודה', english: 'Thank you', category: 'greetings' },
     { khasi: 'Map', hebrew: 'סליחה', english: 'Sorry / excuse me', category: 'greetings' },
     { khasi: 'Bang bha', hebrew: 'טעים מאוד (מחמאה על האוכל)', english: 'Very tasty (food compliment)', category: 'greetings' },
+    // Word of the day 10.11 (user): Sngewbha - בבקשה.
+    { khasi: 'Sngewbha', hebrew: 'בבקשה', english: 'please', category: 'greetings', added: '2026-11-10' },
 
     { khasi: 'Jingbam', hebrew: 'אוכל', english: 'Food', category: 'jingbam' },
     { khasi: 'Doh syiar', hebrew: 'עוף', english: 'Chicken meat', category: 'jingbam' },

@@ -23960,6 +23960,8 @@
     { khasi: "Khublei", hebrew: "\u05EA\u05D5\u05D3\u05D4", english: "Thank you", category: "greetings" },
     { khasi: "Map", hebrew: "\u05E1\u05DC\u05D9\u05D7\u05D4", english: "Sorry / excuse me", category: "greetings" },
     { khasi: "Bang bha", hebrew: "\u05D8\u05E2\u05D9\u05DD \u05DE\u05D0\u05D5\u05D3 (\u05DE\u05D7\u05DE\u05D0\u05D4 \u05E2\u05DC \u05D4\u05D0\u05D5\u05DB\u05DC)", english: "Very tasty (food compliment)", category: "greetings" },
+    // Word of the day 10.11 (user): Sngewbha - בבקשה.
+    { khasi: "Sngewbha", hebrew: "\u05D1\u05D1\u05E7\u05E9\u05D4", english: "please", category: "greetings", added: "2026-11-10" },
     { khasi: "Jingbam", hebrew: "\u05D0\u05D5\u05DB\u05DC", english: "Food", category: "jingbam" },
     { khasi: "Doh syiar", hebrew: "\u05E2\u05D5\u05E3", english: "Chicken meat", category: "jingbam" },
     { khasi: "Doh masi", hebrew: "\u05D1\u05E9\u05E8 \u05E4\u05E8\u05D4", english: "Beef", category: "jingbam" },
