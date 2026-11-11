@@ -24020,6 +24020,7 @@
     { khasi: "Khlor", hebrew: "\u05DB\u05D5\u05DB\u05D1/\u05DB\u05D5\u05DB\u05D1\u05D9\u05DD", english: "star/stars", category: "nature", added: "2026-11-05" },
     { khasi: "Bneng", hebrew: "\u05D2\u05DF \u05E2\u05D3\u05DF/\u05E9\u05DE\u05D9\u05D9\u05DD", english: "Heaven/sky", category: "nature", added: "2026-11-06" },
     { khasi: "lyoh", hebrew: "\u05E2\u05E0\u05E0\u05D9\u05DD/\u05E2\u05E0\u05DF", english: "clouds/cloud", category: "nature", added: "2026-11-07" },
+    { khasi: "Slap", hebrew: "\u05D2\u05E9\u05DD", english: "rain", category: "nature", added: "2026-11-11" },
     { khasi: "Ia phi", hebrew: "\u05D0\u05D5\u05EA\u05DA/\u05D1\u05E9\u05D1\u05D9\u05DC\u05DA/\u05E2\u05D1\u05D5\u05E8\u05DA/\u05DC\u05DA", english: "You / for you / to you", category: "pronouns" },
     { khasi: "Phi", hebrew: "\u05D0\u05EA/\u05D0\u05EA\u05D4", english: "you (singular)", category: "pronouns" },
     { khasi: "i", hebrew: "\u05D4\u05D5\u05D0/\u05D4\u05D9\u05D0 (\u05E6\u05D5\u05E8\u05EA \u05E0\u05D9\u05DE\u05D5\u05E1)", english: "he/him/she/her (polite form)", category: "pronouns", added: "2026-11-02" },
@@ -24087,6 +24088,7 @@
     return [...out];
   }
   var EXTRA_ANSWERS = {
+    "Slap|nature": { he: ["\u05D2\u05E9\u05DE\u05D9\u05DD"] },
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
     "Khublei|greetings": { he: ["\u05EA\u05D5\u05D3\u05D5\u05EA"] },
     "Map|greetings": { he: ["\u05E1\u05DC\u05D9\u05D7\u05D5\u05EA"] },
