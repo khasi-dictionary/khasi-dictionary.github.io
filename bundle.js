@@ -24003,6 +24003,7 @@
     { khasi: "Jrong", hebrew: "\u05D2\u05D1\u05D5\u05D4/\u05D0\u05E8\u05D5\u05DA", english: "tall / long", category: "adjectives" },
     { khasi: "Sat", hebrew: "\u05D7\u05E8\u05D9\u05E3", english: "spicy", category: "adjectives", added: "2026-10-27" },
     { khasi: "Bang", hebrew: "\u05D8\u05E2\u05D9\u05DD", english: "tasty", category: "adjectives" },
+    { khasi: "Khluit", hebrew: "\u05D7\u05DD", english: "hot", category: "adjectives", added: "2026-11-12" },
     { khasi: "Syntiew", hebrew: "\u05E4\u05E8\u05D7\u05D9\u05DD", english: "Flowers", category: "nature" },
     { khasi: "Thiah", hebrew: "\u05DC\u05D9\u05E9\u05D5\u05DF", english: "To sleep", category: "others" },
     { khasi: "khang", hebrew: "\u05E1\u05D2\u05D5\u05E8/\u05E1\u05D2\u05D5\u05E8\u05D4", english: "Closed", category: "others" },
