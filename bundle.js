@@ -24005,7 +24005,7 @@
     { khasi: "Bang", hebrew: "\u05D8\u05E2\u05D9\u05DD", english: "tasty", category: "adjectives" },
     { khasi: "Khluit", hebrew: "\u05D7\u05DD", english: "hot", category: "adjectives", added: "2026-11-12" },
     { khasi: "Khriat", hebrew: "\u05E7\u05E8 (\u05DE\u05D6\u05D2 \u05D0\u05D5\u05D5\u05D9\u05E8)", english: "cold (weather)", category: "adjectives", added: "2026-11-13" },
-    { khasi: "pjah", hebrew: "\u05E7\u05E8 (\u05D0\u05D5\u05DB\u05DC \u05D5\u05E9\u05EA\u05D9\u05D9\u05D4, \u05DC\u05DE\u05E9\u05DC \u05EA\u05D4 \u05E9\u05D4\u05EA\u05E7\u05E8\u05E8)", english: "cold (food and drinks, e.g. tea gone cold)", category: "adjectives" },
+    { khasi: "Pjah", hebrew: "\u05E7\u05E8 (\u05D0\u05D5\u05DB\u05DC \u05D5\u05E9\u05EA\u05D9\u05D9\u05D4, \u05DC\u05DE\u05E9\u05DC \u05EA\u05D4 \u05E9\u05D4\u05EA\u05E7\u05E8\u05E8)", english: "cold (food and drinks, e.g. tea gone cold)", category: "adjectives" },
     { khasi: "Syntiew", hebrew: "\u05E4\u05E8\u05D7\u05D9\u05DD", english: "Flowers", category: "nature" },
     { khasi: "Thiah", hebrew: "\u05DC\u05D9\u05E9\u05D5\u05DF", english: "To sleep", category: "others" },
     { khasi: "khang", hebrew: "\u05E1\u05D2\u05D5\u05E8/\u05E1\u05D2\u05D5\u05E8\u05D4", english: "Closed", category: "others" },
@@ -24327,7 +24327,7 @@
     }
     return [wotd];
   };
-  var cardKey = (e, dir) => dir + "|" + e.khasi + "|" + e.hebrew;
+  var cardKey = (e, dir) => dir + "|" + (e.khasi === "Pjah" ? "pjah" : e.khasi) + "|" + e.hebrew;
   var EMPTY_STATS = { correct: 0, total: 0, cards: {} };
   function Dictionary({ lang, t, stats }) {
     const [query, setQuery] = (0, import_react2.useState)("");

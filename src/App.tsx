@@ -128,7 +128,8 @@ const dailyWords = (today: string = todayJerusalem()): Entry[] => {
 };
 
 type CardDir = 'kh2local' | 'local2kh';
-const cardKey = (e: Entry, dir: CardDir) => dir + '|' + e.khasi + '|' + e.hebrew;
+// Preserve the original device-local progress key after the display capitalization correction.
+const cardKey = (e: Entry, dir: CardDir) => dir + '|' + (e.khasi === 'Pjah' ? 'pjah' : e.khasi) + '|' + e.hebrew;
 
 interface Stats { correct: number; total: number; cards: Record<string, { c: number; w: number }>; }
 const EMPTY_STATS: Stats = { correct: 0, total: 0, cards: {} };

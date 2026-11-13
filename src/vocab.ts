@@ -69,7 +69,7 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Bang', hebrew: 'טעים', english: 'tasty', category: 'adjectives' },
     { khasi: 'Khluit', hebrew: 'חם', english: 'hot', category: 'adjectives', added: '2026-11-12' },
     { khasi: 'Khriat', hebrew: 'קר (מזג אוויר)', english: 'cold (weather)', category: 'adjectives', added: '2026-11-13' },
-    { khasi: 'pjah', hebrew: 'קר (אוכל ושתייה, למשל תה שהתקרר)', english: 'cold (food and drinks, e.g. tea gone cold)', category: 'adjectives' },
+    { khasi: 'Pjah', hebrew: 'קר (אוכל ושתייה, למשל תה שהתקרר)', english: 'cold (food and drinks, e.g. tea gone cold)', category: 'adjectives' },
 
     { khasi: 'Syntiew', hebrew: 'פרחים', english: 'Flowers', category: 'nature' },
     { khasi: 'Thiah', hebrew: 'לישון', english: 'To sleep', category: 'others' },
