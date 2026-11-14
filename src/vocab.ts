@@ -89,6 +89,8 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Bneng', hebrew: 'גן עדן/שמיים', english: 'Heaven/sky', category: 'nature', added: '2026-11-06' },
     { khasi: 'lyoh', hebrew: 'עננים/ענן', english: 'clouds/cloud', category: 'nature', added: '2026-11-07' },
     { khasi: 'Slap', hebrew: 'גשם', english: 'rain', category: 'nature', added: '2026-11-11' },
+    // Word of the day 14.11 (user): Miet - לילה.
+    { khasi: 'Miet', hebrew: 'לילה', english: 'night', category: 'nature', added: '2026-11-14' },
     { khasi: 'Ia phi', hebrew: 'אותך/בשבילך/עבורך/לך', english: 'You / for you / to you', category: 'pronouns' },
     { khasi: 'Phi', hebrew: 'את/אתה', english: 'you (singular)', category: 'pronouns' },
     { khasi: 'i', hebrew: 'הוא/היא (צורת נימוס)', english: 'he/him/she/her (polite form)', category: 'pronouns', added: '2026-11-02' },
@@ -183,6 +185,7 @@ export function englishAnswers(english: string): string[] {
 // Keyed by khasi + category so homograph entries (Saw = red vs Saw = 4) stay separate.
 const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Slap|nature': { he: ['גשמים'] },
+    'Miet|nature': { he: ['לילות'] },
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
     'Khublei|greetings': { he: ['תודות'] },
     'Map|greetings': { he: ['סליחות'] },
