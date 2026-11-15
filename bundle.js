@@ -23981,6 +23981,8 @@
     { khasi: "Sohkhia", hebrew: "\u05DE\u05DC\u05E4\u05E4\u05D5\u05DF", english: "Cucumber", category: "jingbam" },
     { khasi: "Piat", hebrew: "\u05D1\u05E6\u05DC", english: "Onion", category: "jingbam", added: "2026-10-23" },
     { khasi: "Rynsun", hebrew: "\u05E9\u05D5\u05DD", english: "Garlic", category: "jingbam", added: "2026-10-24" },
+    // Word of the day 15.11 (user): Syrwa - מרק.
+    { khasi: "Syrwa", hebrew: "\u05DE\u05E8\u05E7", english: "Soup", category: "jingbam", added: "2026-11-15" },
     { khasi: "Mrat", hebrew: "\u05D7\u05D9\u05D5\u05EA", english: "Animals", category: "mrat" },
     { khasi: "Miaow", hebrew: "\u05D7\u05EA\u05D5\u05DC", english: "Cat", category: "mrat" },
     { khasi: "Ksiew", hebrew: "\u05DB\u05DC\u05D1", english: "Dog", category: "mrat" },
@@ -24095,6 +24097,7 @@
   var EXTRA_ANSWERS = {
     "Slap|nature": { he: ["\u05D2\u05E9\u05DE\u05D9\u05DD"] },
     "Miet|nature": { he: ["\u05DC\u05D9\u05DC\u05D5\u05EA"] },
+    "Syrwa|jingbam": { he: ["\u05DE\u05E8\u05E7\u05D9\u05DD"] },
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
     "Khublei|greetings": { he: ["\u05EA\u05D5\u05D3\u05D5\u05EA"] },
     "Map|greetings": { he: ["\u05E1\u05DC\u05D9\u05D7\u05D5\u05EA"] },

@@ -43,6 +43,8 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Sohkhia', hebrew: 'מלפפון', english: 'Cucumber', category: 'jingbam' },
     { khasi: 'Piat', hebrew: 'בצל', english: 'Onion', category: 'jingbam', added: '2026-10-23' },
     { khasi: 'Rynsun', hebrew: 'שום', english: 'Garlic', category: 'jingbam', added: '2026-10-24' },
+    // Word of the day 15.11 (user): Syrwa - מרק.
+    { khasi: 'Syrwa', hebrew: 'מרק', english: 'Soup', category: 'jingbam', added: '2026-11-15' },
 
     { khasi: 'Mrat', hebrew: 'חיות', english: 'Animals', category: 'mrat' },
     { khasi: 'Miaow', hebrew: 'חתול', english: 'Cat', category: 'mrat' },
@@ -186,6 +188,7 @@ export function englishAnswers(english: string): string[] {
 const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Slap|nature': { he: ['גשמים'] },
     'Miet|nature': { he: ['לילות'] },
+    'Syrwa|jingbam': { he: ['מרקים'] },
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
     'Khublei|greetings': { he: ['תודות'] },
     'Map|greetings': { he: ['סליחות'] },
