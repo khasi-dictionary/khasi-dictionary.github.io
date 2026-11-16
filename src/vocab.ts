@@ -65,6 +65,8 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Bha', hebrew: 'מאוד', english: 'very', category: 'others' },
     { khasi: 'Klat', hebrew: 'כוס', english: 'cup', category: 'homekitchen', added: '2026-10-31' },
     { khasi: 'Jingsiang', hebrew: 'מפת שולחן', english: 'Tablecloth', category: 'homekitchen', added: '2026-11-01' },
+    // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
+    { khasi: 'Pla jri', hebrew: 'בקבוק חם (Pla = שקית, Jri = גומי)', english: 'Hot water bottle (Pla = bag, Jri = rubber)', category: 'homekitchen', added: '2026-11-16' },
     { khasi: 'Siang', hebrew: 'לפרוש/לפרוס (כמו שפורשים סדין)', english: 'To spread / lay out (like spreading a sheet)', category: 'others' },
     { khasi: 'Jrong', hebrew: 'גבוה/ארוך', english: 'tall / long', category: 'adjectives' },
     { khasi: 'Sat', hebrew: 'חריף', english: 'spicy', category: 'adjectives', added: '2026-10-27' },
@@ -189,6 +191,7 @@ const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Slap|nature': { he: ['גשמים'] },
     'Miet|nature': { he: ['לילות'] },
     'Syrwa|jingbam': { he: ['מרקים'] },
+    'Pla jri|homekitchen': { he: ['בקבוקים חמים'] },
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
     'Khublei|greetings': { he: ['תודות'] },
     'Map|greetings': { he: ['סליחות'] },

@@ -29,9 +29,9 @@
     mod
   ));
 
-  // ../esb/node_modules/scheduler/cjs/scheduler.development.js
+  // node_modules/scheduler/cjs/scheduler.development.js
   var require_scheduler_development = __commonJS({
-    "../esb/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
+    "node_modules/scheduler/cjs/scheduler.development.js"(exports) {
       "use strict";
       (function() {
         function performWorkUntilDeadline() {
@@ -288,9 +288,9 @@
     }
   });
 
-  // ../esb/node_modules/scheduler/index.js
+  // node_modules/scheduler/index.js
   var require_scheduler = __commonJS({
-    "../esb/node_modules/scheduler/index.js"(exports, module) {
+    "node_modules/scheduler/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -300,9 +300,9 @@
     }
   });
 
-  // ../esb/node_modules/react/cjs/react.development.js
+  // node_modules/react/cjs/react.development.js
   var require_react_development = __commonJS({
-    "../esb/node_modules/react/cjs/react.development.js"(exports, module) {
+    "node_modules/react/cjs/react.development.js"(exports, module) {
       "use strict";
       (function() {
         function defineDeprecationWarning(methodName, info) {
@@ -1297,9 +1297,9 @@
     }
   });
 
-  // ../esb/node_modules/react/index.js
+  // node_modules/react/index.js
   var require_react = __commonJS({
-    "../esb/node_modules/react/index.js"(exports, module) {
+    "node_modules/react/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -1309,9 +1309,9 @@
     }
   });
 
-  // ../esb/node_modules/react-dom/cjs/react-dom.development.js
+  // node_modules/react-dom/cjs/react-dom.development.js
   var require_react_dom_development = __commonJS({
-    "../esb/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
+    "node_modules/react-dom/cjs/react-dom.development.js"(exports) {
       "use strict";
       (function() {
         function noop() {
@@ -1564,9 +1564,9 @@
     }
   });
 
-  // ../esb/node_modules/react-dom/index.js
+  // node_modules/react-dom/index.js
   var require_react_dom = __commonJS({
-    "../esb/node_modules/react-dom/index.js"(exports, module) {
+    "node_modules/react-dom/index.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -1577,9 +1577,9 @@
     }
   });
 
-  // ../esb/node_modules/react-dom/cjs/react-dom-client.development.js
+  // node_modules/react-dom/cjs/react-dom-client.development.js
   var require_react_dom_client_development = __commonJS({
-    "../esb/node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
+    "node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
       "use strict";
       (function() {
         function findHook(fiber, id) {
@@ -23538,9 +23538,9 @@
     }
   });
 
-  // ../esb/node_modules/react-dom/client.js
+  // node_modules/react-dom/client.js
   var require_client = __commonJS({
-    "../esb/node_modules/react-dom/client.js"(exports, module) {
+    "node_modules/react-dom/client.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -23551,9 +23551,9 @@
     }
   });
 
-  // ../esb/node_modules/react/cjs/react-jsx-runtime.development.js
+  // node_modules/react/cjs/react-jsx-runtime.development.js
   var require_react_jsx_runtime_development = __commonJS({
-    "../esb/node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
+    "node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
       "use strict";
       (function() {
         function getComponentNameFromType(type) {
@@ -23822,9 +23822,9 @@
     }
   });
 
-  // ../esb/node_modules/react/jsx-runtime.js
+  // node_modules/react/jsx-runtime.js
   var require_jsx_runtime = __commonJS({
-    "../esb/node_modules/react/jsx-runtime.js"(exports, module) {
+    "node_modules/react/jsx-runtime.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -24001,6 +24001,8 @@
     { khasi: "Bha", hebrew: "\u05DE\u05D0\u05D5\u05D3", english: "very", category: "others" },
     { khasi: "Klat", hebrew: "\u05DB\u05D5\u05E1", english: "cup", category: "homekitchen", added: "2026-10-31" },
     { khasi: "Jingsiang", hebrew: "\u05DE\u05E4\u05EA \u05E9\u05D5\u05DC\u05D7\u05DF", english: "Tablecloth", category: "homekitchen", added: "2026-11-01" },
+    // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
+    { khasi: "Pla jri", hebrew: "\u05D1\u05E7\u05D1\u05D5\u05E7 \u05D7\u05DD (Pla = \u05E9\u05E7\u05D9\u05EA, Jri = \u05D2\u05D5\u05DE\u05D9)", english: "Hot water bottle (Pla = bag, Jri = rubber)", category: "homekitchen", added: "2026-11-16" },
     { khasi: "Siang", hebrew: "\u05DC\u05E4\u05E8\u05D5\u05E9/\u05DC\u05E4\u05E8\u05D5\u05E1 (\u05DB\u05DE\u05D5 \u05E9\u05E4\u05D5\u05E8\u05E9\u05D9\u05DD \u05E1\u05D3\u05D9\u05DF)", english: "To spread / lay out (like spreading a sheet)", category: "others" },
     { khasi: "Jrong", hebrew: "\u05D2\u05D1\u05D5\u05D4/\u05D0\u05E8\u05D5\u05DA", english: "tall / long", category: "adjectives" },
     { khasi: "Sat", hebrew: "\u05D7\u05E8\u05D9\u05E3", english: "spicy", category: "adjectives", added: "2026-10-27" },
@@ -24098,6 +24100,7 @@
     "Slap|nature": { he: ["\u05D2\u05E9\u05DE\u05D9\u05DD"] },
     "Miet|nature": { he: ["\u05DC\u05D9\u05DC\u05D5\u05EA"] },
     "Syrwa|jingbam": { he: ["\u05DE\u05E8\u05E7\u05D9\u05DD"] },
+    "Pla jri|homekitchen": { he: ["\u05D1\u05E7\u05D1\u05D5\u05E7\u05D9\u05DD \u05D7\u05DE\u05D9\u05DD"] },
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
     "Khublei|greetings": { he: ["\u05EA\u05D5\u05D3\u05D5\u05EA"] },
     "Map|greetings": { he: ["\u05E1\u05DC\u05D9\u05D7\u05D5\u05EA"] },
