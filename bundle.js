@@ -24002,6 +24002,8 @@
     { khasi: "Klat", hebrew: "\u05DB\u05D5\u05E1", english: "cup", category: "homekitchen", added: "2026-10-31" },
     { khasi: "Jingsiang", hebrew: "\u05DE\u05E4\u05EA \u05E9\u05D5\u05DC\u05D7\u05DF", english: "Tablecloth", category: "homekitchen", added: "2026-11-01" },
     // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
+    // Word of the day 17.11 (user, sent 18.11): Mluh - מלח.
+    { khasi: "Mluh", hebrew: "\u05DE\u05DC\u05D7", english: "Salt", category: "jingbam", added: "2026-11-17" },
     { khasi: "Pla jri", hebrew: "\u05D1\u05E7\u05D1\u05D5\u05E7 \u05D7\u05DD (Pla = \u05E9\u05E7\u05D9\u05EA, Jri = \u05D2\u05D5\u05DE\u05D9)", english: "Hot water bottle (Pla = bag, Jri = rubber)", category: "homekitchen", added: "2026-11-16" },
     // Component words of Pla jri, added separately at user request 16.11 22:06 (not word of the day - no added date).
     { khasi: "Pla", hebrew: "\u05E9\u05E7\u05D9\u05EA/\u05EA\u05D9\u05E7", english: "Bag", category: "homekitchen" },

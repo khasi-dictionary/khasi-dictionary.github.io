@@ -66,6 +66,8 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Klat', hebrew: 'כוס', english: 'cup', category: 'homekitchen', added: '2026-10-31' },
     { khasi: 'Jingsiang', hebrew: 'מפת שולחן', english: 'Tablecloth', category: 'homekitchen', added: '2026-11-01' },
     // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
+    // Word of the day 17.11 (user, sent 18.11): Mluh - מלח.
+    { khasi: 'Mluh', hebrew: 'מלח', english: 'Salt', category: 'jingbam', added: '2026-11-17' },
     { khasi: 'Pla jri', hebrew: 'בקבוק חם (Pla = שקית, Jri = גומי)', english: 'Hot water bottle (Pla = bag, Jri = rubber)', category: 'homekitchen', added: '2026-11-16' },
     // Component words of Pla jri, added separately at user request 16.11 22:06 (not word of the day - no added date).
     { khasi: 'Pla', hebrew: 'שקית/תיק', english: 'Bag', category: 'homekitchen' },
