@@ -24004,7 +24004,7 @@
     // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
     { khasi: "Pla jri", hebrew: "\u05D1\u05E7\u05D1\u05D5\u05E7 \u05D7\u05DD (Pla = \u05E9\u05E7\u05D9\u05EA, Jri = \u05D2\u05D5\u05DE\u05D9)", english: "Hot water bottle (Pla = bag, Jri = rubber)", category: "homekitchen", added: "2026-11-16" },
     // Component words of Pla jri, added separately at user request 16.11 22:06 (not word of the day - no added date).
-    { khasi: "Pla", hebrew: "\u05E9\u05E7\u05D9\u05EA", english: "Bag", category: "homekitchen" },
+    { khasi: "Pla", hebrew: "\u05E9\u05E7\u05D9\u05EA/\u05EA\u05D9\u05E7", english: "Bag", category: "homekitchen" },
     { khasi: "Jri", hebrew: "\u05D2\u05D5\u05DE\u05D9", english: "Rubber", category: "others" },
     { khasi: "Siang", hebrew: "\u05DC\u05E4\u05E8\u05D5\u05E9/\u05DC\u05E4\u05E8\u05D5\u05E1 (\u05DB\u05DE\u05D5 \u05E9\u05E4\u05D5\u05E8\u05E9\u05D9\u05DD \u05E1\u05D3\u05D9\u05DF)", english: "To spread / lay out (like spreading a sheet)", category: "others" },
     { khasi: "Jrong", hebrew: "\u05D2\u05D1\u05D5\u05D4/\u05D0\u05E8\u05D5\u05DA", english: "tall / long", category: "adjectives" },
@@ -24104,7 +24104,7 @@
     "Miet|nature": { he: ["\u05DC\u05D9\u05DC\u05D5\u05EA"] },
     "Syrwa|jingbam": { he: ["\u05DE\u05E8\u05E7\u05D9\u05DD"] },
     "Pla jri|homekitchen": { he: ["\u05D1\u05E7\u05D1\u05D5\u05E7\u05D9\u05DD \u05D7\u05DE\u05D9\u05DD"] },
-    "Pla|homekitchen": { he: ["\u05E9\u05E7\u05D9\u05D5\u05EA"] },
+    "Pla|homekitchen": { he: ["\u05E9\u05E7\u05D9\u05D5\u05EA", "\u05EA\u05D9\u05E7\u05D9\u05DD"] },
     // Singular/plural pairs for all noun entries (user request 7.11): each noun accepts both forms.
     "Khublei|greetings": { he: ["\u05EA\u05D5\u05D3\u05D5\u05EA"] },
     "Map|greetings": { he: ["\u05E1\u05DC\u05D9\u05D7\u05D5\u05EA"] },
