@@ -24174,6 +24174,9 @@
   function localText(entry, lang) {
     return lang === "he" ? entry.hebrew : entry.english;
   }
+  function localPrompt(entry, lang) {
+    return localText(entry, lang).replace(/\s*\([^()]*(?:=|מילולית:|literally:)[^()]*\)/g, "").trim();
+  }
   function khasiMatches(entry, lang) {
     const text = localText(entry, lang);
     return ENTRIES.filter((e) => localText(e, lang) === text);
@@ -24491,7 +24494,7 @@
       setFeedback(null);
     };
     const cs = current ? CAT_STYLE[current.entry.category] : null;
-    const prompt = current ? current.dir === "kh2local" ? current.entry.khasi : localText(current.entry, lang) : "";
+    const prompt = current ? current.dir === "kh2local" ? current.entry.khasi : localPrompt(current.entry, lang) : "";
     const isLast = round ? round.idx + 1 >= round.deck.length : false;
     const misses = round ? round.deck.map((rc, i) => ({ rc, i })).filter((x) => round.results[x.i] === "w" || round.results[x.i] === "s") : [];
     const dirLabel = effDirection === "mix" ? t.mix : effDirection === "kh2local" ? t.kh2local : t.local2kh;
@@ -24602,7 +24605,11 @@
             feedback && /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("p", { role: "status", className: feedback.ok ? "fc-ok" : "fc-bad", children: [
               feedback.ok ? `\u2705 ${t.correct}` : `\u274C ${t.wrong}`,
               " ",
-              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "fc-expected", dir: "auto", children: feedback.expected.join(" \xB7 ") })
+              /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "fc-expected", dir: "auto", children: feedback.expected.join(" \xB7 ") }),
+              current.dir === "local2kh" && localPrompt(current.entry, lang) !== localText(current.entry, lang) ? /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { style: { opacity: 0.75, fontSize: 14 }, dir: "auto", children: [
+                " \xB7 ",
+                localText(current.entry, lang)
+              ] }) : null
             ] }),
             /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "fc-actions", children: [
               feedback ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(FileButton, { variant: "primary", onClick: () => advance(), children: isLast ? t.finish : t.next }) : /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(FileButton, { variant: "primary", onClick: check, disabled: !answer.trim(), children: t.check }),

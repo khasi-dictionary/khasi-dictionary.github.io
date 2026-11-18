@@ -271,6 +271,14 @@ export function localText(entry: Entry, lang: Lang): string {
     return lang === 'he' ? entry.hebrew : entry.english;
 }
 
+// Practice prompt text (user request 18.11): a parenthetical that breaks the phrase down
+// (e.g. "בקבוק חם (Pla = שקית, Jri = גומי)" or "לילה טוב (מילולית: תישן טוב)") reveals the
+// Khasi answer, so the prompt strips it. The full gloss stays in the dictionary tab and in
+// the post-answer feedback. Disambiguating notes like "קר (מזג אוויר)" carry no answer and stay.
+export function localPrompt(entry: Entry, lang: Lang): string {
+    return localText(entry, lang).replace(/\s*\([^()]*(?:=|מילולית:|literally:)[^()]*\)/g, '').trim();
+}
+
 // Every entry whose local-language text is exactly this entry's (for local -> kh accept list)
 export function khasiMatches(entry: Entry, lang: Lang): Entry[] {
     const text = localText(entry, lang);

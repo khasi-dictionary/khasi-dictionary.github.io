@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Caption, ChoiceRow, Closing, FileButton, FileCard, Header, Link, NavLink, Route, Routes, Row, Rows, TextField, useLocalState } from './kit';
-import { CATEGORIES, ENTRIES, khasiGroup, khasiMatches, localAnswers, localText, normalizeEnglish, normalizeHebrew, normalizeKhasi, type Entry, type Lang } from './vocab';
+import { CATEGORIES, ENTRIES, khasiGroup, khasiMatches, localAnswers, localPrompt, localText, normalizeEnglish, normalizeHebrew, normalizeKhasi, type Entry, type Lang } from './vocab';
 import { DECOR } from './decor-data';
 import { OPENSANS_LATIN, OPENSANS_LATIN_RANGE, OPENSANS_HEBREW, OPENSANS_HEBREW_RANGE } from './fonts-data';
 import './fonts.css';
@@ -293,7 +293,7 @@ function Practice({ lang, t, stats, setStats, savedStats }: { lang: Lang; t: Str
     };
 
     const cs = current ? CAT_STYLE[current.entry.category] : null;
-    const prompt = current ? (current.dir === 'kh2local' ? current.entry.khasi : localText(current.entry, lang)) : '';
+    const prompt = current ? (current.dir === 'kh2local' ? current.entry.khasi : localPrompt(current.entry, lang)) : '';
     const isLast = round ? round.idx + 1 >= round.deck.length : false;
     const misses = round ? round.deck.map((rc, i) => ({ rc, i })).filter(x => round.results[x.i] === 'w' || round.results[x.i] === 's') : [];
     const dirLabel = effDirection === 'mix' ? t.mix : (effDirection === 'kh2local' ? t.kh2local : t.local2kh);
@@ -357,6 +357,8 @@ function Practice({ lang, t, stats, setStats, savedStats }: { lang: Lang; t: Str
                 <TextField label={t.yourAnswer} value={answer} onChange={setAnswer} />
                 {feedback && <p role="status" className={feedback.ok ? 'fc-ok' : 'fc-bad'}>
                     {feedback.ok ? `✅ ${t.correct}` : `❌ ${t.wrong}`} <span className="fc-expected" dir="auto">{feedback.expected.join(' · ')}</span>
+                    {current.dir === 'local2kh' && localPrompt(current.entry, lang) !== localText(current.entry, lang)
+                        ? <span style={{ opacity: 0.75, fontSize: 14 }} dir="auto"> · {localText(current.entry, lang)}</span> : null}
                 </p>}
                 <div className="fc-actions">
                     {feedback
