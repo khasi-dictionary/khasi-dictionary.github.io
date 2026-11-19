@@ -66,6 +66,8 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Klat', hebrew: 'כוס', english: 'cup', category: 'homekitchen', added: '2026-10-31' },
     { khasi: 'Jingsiang', hebrew: 'מפת שולחן', english: 'Tablecloth', category: 'homekitchen', added: '2026-11-01' },
     // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
+    // Word of the day 19.11 (user): Soh marit - פלפל. Black pepper only, not chili.
+    { khasi: 'Soh marit', hebrew: 'פלפל', english: 'Black pepper', category: 'jingbam', added: '2026-11-19' },
     // Word of the day 17.11 (user, sent 18.11): Mluh - מלח.
     { khasi: 'Mluh', hebrew: 'מלח', english: 'Salt', category: 'jingbam', added: '2026-11-17' },
     { khasi: 'Pla jri', hebrew: 'בקבוק חם (Pla = שקית, Jri = גומי)', english: 'Hot water bottle (Pla = bag, Jri = rubber)', category: 'homekitchen', added: '2026-11-16' },
@@ -195,6 +197,7 @@ export function englishAnswers(english: string): string[] {
 const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Slap|nature': { he: ['גשמים'] },
     'Miet|nature': { he: ['לילות'] },
+    'Soh marit|jingbam': { he: ['פילפל', 'פלפל שחור', 'פילפל שחור'] },
     'Syrwa|jingbam': { he: ['מרקים'] },
     'Pla jri|homekitchen': { he: ['בקבוקים חמים'] },
     'Pla|homekitchen': { he: ['שקיות', 'תיקים'] },
