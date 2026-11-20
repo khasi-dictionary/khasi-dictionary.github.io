@@ -24002,6 +24002,8 @@
     { khasi: "Klat", hebrew: "\u05DB\u05D5\u05E1", english: "cup", category: "homekitchen", added: "2026-10-31" },
     { khasi: "Jingsiang", hebrew: "\u05DE\u05E4\u05EA \u05E9\u05D5\u05DC\u05D7\u05DF", english: "Tablecloth", category: "homekitchen", added: "2026-11-01" },
     // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
+    // Word of the day 20.11 (user): Bam - לאכול/אכילה.
+    { khasi: "Bam", hebrew: "\u05DC\u05D0\u05DB\u05D5\u05DC/\u05D0\u05DB\u05D9\u05DC\u05D4", english: "To eat / eating", category: "others", added: "2026-11-20" },
     // Word of the day 19.11 (user): Soh marit - פלפל. Black pepper only, not chili.
     { khasi: "Soh marit", hebrew: "\u05E4\u05DC\u05E4\u05DC", english: "Black pepper", category: "jingbam", added: "2026-11-19" },
     // Word of the day 17.11 (user, sent 18.11): Mluh - מלח.
