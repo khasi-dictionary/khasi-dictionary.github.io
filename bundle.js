@@ -24002,6 +24002,8 @@
     { khasi: "Klat", hebrew: "\u05DB\u05D5\u05E1", english: "cup", category: "homekitchen", added: "2026-10-31" },
     { khasi: "Jingsiang", hebrew: "\u05DE\u05E4\u05EA \u05E9\u05D5\u05DC\u05D7\u05DF", english: "Tablecloth", category: "homekitchen", added: "2026-11-01" },
     // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
+    // Word of the day 22.11 (user, sent 23.11): Shini - סוכר.
+    { khasi: "Shini", hebrew: "\u05E1\u05D5\u05DB\u05E8", english: "Sugar", category: "jingbam", added: "2026-11-22" },
     // Word of the day 21.11 (user): Ngap - דבש.
     { khasi: "Ngap", hebrew: "\u05D3\u05D1\u05E9", english: "Honey", category: "jingbam", added: "2026-11-21" },
     // Word of the day 20.11 (user): Bam - לאכול/אכילה.
