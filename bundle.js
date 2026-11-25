@@ -24124,6 +24124,7 @@
     "Khublei|greetings": { he: ["\u05EA\u05D5\u05D3\u05D5\u05EA"] },
     "Map|greetings": { he: ["\u05E1\u05DC\u05D9\u05D7\u05D5\u05EA"] },
     "Ruti|jingbam": { he: ["\u05DC\u05D7\u05DE\u05D9\u05DD"] },
+    "Sohbaingon|jingbam": { he: ["\u05D7\u05E6\u05D9\u05DC\u05D9\u05DD"] },
     "Sngi|nature": { he: ["\u05E9\u05DE\u05E9\u05D5\u05EA", "\u05D9\u05DE\u05D9\u05DD"] },
     "Pylleng|jingbam": { he: ["\u05D1\u05D9\u05E6\u05D9\u05DD", "\u05D7\u05D1\u05D9\u05EA\u05D5\u05EA"] },
     "Doh kha|jingbam": { he: ["\u05D3\u05D2\u05D9\u05DD"] },

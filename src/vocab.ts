@@ -215,6 +215,7 @@ const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Khublei|greetings': { he: ['תודות'] },
     'Map|greetings': { he: ['סליחות'] },
     'Ruti|jingbam': { he: ['לחמים'] },
+    'Sohbaingon|jingbam': { he: ['חצילים'] },
     'Sngi|nature': { he: ['שמשות', 'ימים'] },
     'Pylleng|jingbam': { he: ['ביצים', 'חביתות'] },
     'Doh kha|jingbam': { he: ['דגים'] },
