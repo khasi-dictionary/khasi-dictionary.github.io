@@ -24002,6 +24002,8 @@
     { khasi: "Klat", hebrew: "\u05DB\u05D5\u05E1", english: "cup", category: "homekitchen", added: "2026-10-31" },
     { khasi: "Jingsiang", hebrew: "\u05DE\u05E4\u05EA \u05E9\u05D5\u05DC\u05D7\u05DF", english: "Tablecloth", category: "homekitchen", added: "2026-11-01" },
     // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
+    // Word of the day 25.11 (user): Shabi - מפתח.
+    { khasi: "Shabi", hebrew: "\u05DE\u05E4\u05EA\u05D7", english: "Key", category: "homekitchen", added: "2026-11-25" },
     // Word of the day 24.11 (user): Sohbaingon - חציל.
     { khasi: "Sohbaingon", hebrew: "\u05D7\u05E6\u05D9\u05DC", english: "Eggplant", category: "jingbam", added: "2026-11-24" },
     // Word of the day 23.11 (user): Ym lei lei - בבקשה. Also reply to "thank you": על לא דבר / בשמחה.
