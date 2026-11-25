@@ -265,12 +265,38 @@ const EXTRA_ANSWERS: Record<string, { he?: string[]; en?: string[] }> = {
     'Bang bha|greetings': { he: ['טעים מאד'] },
 };
 
+// Plural acceptance (user request 25.11): every noun also accepts its plural in practice.
+// Applies to the noun categories only (verbs, adjectives, pronouns, numbers, greetings stay exact).
+const NOUN_CATEGORIES = new Set(['jingbam', 'mrat', 'nature', 'furnitures', 'homekitchen']);
+// Nouns whose plural is not a plain suffix; replaces the generic rule for that word.
+const EXACT_PLURALS: Record<string, string[]> = {
+    'שולחן': ['שולחנות'],
+    'פרי': ['פירות'],
+    'יום': ['ימים'],
+    'ביצה': ['ביצים', 'ביצות'],
+};
+
+// Plural candidates for one normalized single-word Hebrew answer. Phrases and already-plural
+// forms return nothing. Generic rules cover regular nouns; EXACT_PLURALS owns the irregulars.
+function hebrewPlurals(w: string): string[] {
+    if (!w || w.includes(' ') || w.endsWith('ים') || w.endsWith('ות')) return [];
+    const exact = EXACT_PLURALS[w];
+    if (exact) return exact;
+    if (w.endsWith('ה')) return [w.slice(0, -1) + 'ות'];
+    if (w.endsWith('ת')) return [w.slice(0, -1) + 'ות'];
+    if (w.endsWith('ם')) return [w.slice(0, -1) + 'מים'];
+    return [w + 'ים', w + 'ות'];
+}
+
 export function localAnswers(entry: Entry, lang: Lang): string[] {
     const base = lang === 'he' ? hebrewAnswers(entry.hebrew) : englishAnswers(entry.english);
     const norm = lang === 'he' ? normalizeHebrew : normalizeEnglish;
     const extra = EXTRA_ANSWERS[`${entry.khasi}|${entry.category}`];
     const extraList = (lang === 'he' ? extra?.he : extra?.en) ?? [];
-    const accepted = [...new Set([...base, ...extraList.map(norm)])];
+    let accepted = [...new Set([...base, ...extraList.map(norm)])];
+    if (lang === 'he' && NOUN_CATEGORIES.has(entry.category)) {
+        accepted = [...new Set([...accepted, ...accepted.flatMap(hebrewPlurals)])];
+    }
     if (lang !== 'he') return accepted;
     // Typo tolerance (user request 2.11): ן typed instead of ו is a spelling slip, not a wrong answer.
     // One-directional only: ו typed instead of a canonical ן stays wrong. Canonical display unchanged.

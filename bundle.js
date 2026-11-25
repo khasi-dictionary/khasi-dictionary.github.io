@@ -24173,12 +24173,31 @@
     "Bha|others": { he: ["\u05DE\u05D0\u05D3"] },
     "Bang bha|greetings": { he: ["\u05D8\u05E2\u05D9\u05DD \u05DE\u05D0\u05D3"] }
   };
+  var NOUN_CATEGORIES = /* @__PURE__ */ new Set(["jingbam", "mrat", "nature", "furnitures", "homekitchen"]);
+  var EXACT_PLURALS = {
+    "\u05E9\u05D5\u05DC\u05D7\u05DF": ["\u05E9\u05D5\u05DC\u05D7\u05E0\u05D5\u05EA"],
+    "\u05E4\u05E8\u05D9": ["\u05E4\u05D9\u05E8\u05D5\u05EA"],
+    "\u05D9\u05D5\u05DD": ["\u05D9\u05DE\u05D9\u05DD"],
+    "\u05D1\u05D9\u05E6\u05D4": ["\u05D1\u05D9\u05E6\u05D9\u05DD", "\u05D1\u05D9\u05E6\u05D5\u05EA"]
+  };
+  function hebrewPlurals(w) {
+    if (!w || w.includes(" ") || w.endsWith("\u05D9\u05DD") || w.endsWith("\u05D5\u05EA")) return [];
+    const exact = EXACT_PLURALS[w];
+    if (exact) return exact;
+    if (w.endsWith("\u05D4")) return [w.slice(0, -1) + "\u05D5\u05EA"];
+    if (w.endsWith("\u05EA")) return [w.slice(0, -1) + "\u05D5\u05EA"];
+    if (w.endsWith("\u05DD")) return [w.slice(0, -1) + "\u05DE\u05D9\u05DD"];
+    return [w + "\u05D9\u05DD", w + "\u05D5\u05EA"];
+  }
   function localAnswers(entry, lang) {
     const base = lang === "he" ? hebrewAnswers(entry.hebrew) : englishAnswers(entry.english);
     const norm = lang === "he" ? normalizeHebrew : normalizeEnglish;
     const extra = EXTRA_ANSWERS[`${entry.khasi}|${entry.category}`];
     const extraList = (lang === "he" ? extra?.he : extra?.en) ?? [];
-    const accepted = [.../* @__PURE__ */ new Set([...base, ...extraList.map(norm)])];
+    let accepted = [.../* @__PURE__ */ new Set([...base, ...extraList.map(norm)])];
+    if (lang === "he" && NOUN_CATEGORIES.has(entry.category)) {
+      accepted = [.../* @__PURE__ */ new Set([...accepted, ...accepted.flatMap(hebrewPlurals)])];
+    }
     if (lang !== "he") return accepted;
     const withTypo = accepted.flatMap((a) => {
       if (!a.includes("\u05D5")) return [a];
