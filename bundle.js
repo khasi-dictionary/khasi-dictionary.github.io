@@ -24004,6 +24004,8 @@
     // Word of the day 16.11 (user): Pla jri - בקבוק חם (Pla = שקית, Jri = גומי).
     // Word of the day 25.11 (user): Shabi - מפתח.
     { khasi: "Shabi", hebrew: "\u05DE\u05E4\u05EA\u05D7", english: "Key", category: "homekitchen", added: "2026-11-25" },
+    // Word of the day 26.11 (user): Iong - שחור.
+    { khasi: "Iong", hebrew: "\u05E9\u05D7\u05D5\u05E8", english: "Black", category: "adjectives", added: "2026-11-26" },
     // Word of the day 24.11 (user): Sohbaingon - חציל.
     { khasi: "Sohbaingon", hebrew: "\u05D7\u05E6\u05D9\u05DC", english: "Eggplant", category: "jingbam", added: "2026-11-24" },
     // Word of the day 23.11 (user): Ym lei lei - בבקשה. Also reply to "thank you": על לא דבר / בשמחה.
