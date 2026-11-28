@@ -70,6 +70,8 @@ export const ENTRIES: Entry[] = [
     { khasi: 'Shabi', hebrew: 'מפתח', english: 'Key', category: 'homekitchen', added: '2026-11-25' },
     // Word of the day 26.11 (user): Iong - שחור.
     { khasi: 'Iong', hebrew: 'שחור', english: 'Black', category: 'adjectives', added: '2026-11-26' },
+    // Word of the day 28.11 (user): Lieh - לבן (the colour, not the dairy product - user clarification 28.11).
+    { khasi: 'Lieh', hebrew: 'לבן (הצבע)', english: 'White (the colour)', category: 'adjectives', added: '2026-11-28' },
     // Word of the day 24.11 (user): Sohbaingon - חציל.
     { khasi: 'Sohbaingon', hebrew: 'חציל', english: 'Eggplant', category: 'jingbam', added: '2026-11-24' },
     // Word of the day 23.11 (user): Ym lei lei - בבקשה. Also reply to "thank you": על לא דבר / בשמחה.

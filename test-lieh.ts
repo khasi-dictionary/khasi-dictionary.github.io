@@ -1,0 +1,10 @@
+import {ENTRIES,localAnswers,localPrompt,normalizeHebrew} from './src/vocab';
+import assert from 'node:assert/strict';
+assert.equal(ENTRIES.length,106);
+const i=ENTRIES.find(e=>e.khasi==='Lieh')!;
+assert.equal(i.hebrew,'לבן (הצבע)'); assert.equal(i.category,'adjectives'); assert.equal(i.added,'2026-11-28');
+assert(localAnswers(i,'he').includes(normalizeHebrew('לבן')),'bare לבן accepted');
+assert(!localAnswers(i,'he').includes(normalizeHebrew('לבנים')),'adjectives: no plural rule');
+assert(localPrompt(i,'he').includes('(הצבע)'),'disambiguating note stays in prompt');
+assert.equal(ENTRIES.filter(e=>e.added).sort((a,b)=>b.added!.localeCompare(a.added!))[0].khasi,'Lieh');
+console.log('PASS: 106 entries, Lieh = לבן (הצבע) (28.11, adjectives), לבן accepted, note kept in prompt, WOTD = Lieh');
